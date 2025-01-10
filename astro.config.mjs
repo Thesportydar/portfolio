@@ -11,5 +11,5 @@ export default defineConfig({
         svg: true,
     },
 
-    site: "https://inqui.me"
+    site: "http://inaqui.me"
 });
