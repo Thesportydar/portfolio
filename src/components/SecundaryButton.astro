@@ -1,0 +1,10 @@
+---
+interface Props {
+    text: string,
+}
+
+const {text} = Astro.props;
+---
+<button class="p-3 rounded-2xl bg-gray-800">
+    <p class="font-semibold text-white">{text}</p>
+</button>

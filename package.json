@@ -9,6 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.3"
+    "@astrojs/tailwind": "^5.1.4",
+    "astro": "^5.1.3",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-motion": "^1.0.1"
+  },
+  "devDependencies": {
+    "tailwindcss-intersect": "^2.0.1"
   }
 }

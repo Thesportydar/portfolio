@@ -1,0 +1,28 @@
+{
+    "reis": {
+        "name": "REIS",
+        "description": "<p>Es una plataforma web tipo <strong>classroom</strong> diseñada para apoyar la enseñanza mediante <strong>Recorridos de Estudio e Investigacion(REIs)</strong>, organizando el aprendizaje en torno a preguntas y respuestas. Facilita la interacción entre estudiantes y entre estudiantes y profesores, permitiendo la colaboración en tiempo real y el seguimiento centralizado del progreso académico.</p>",
+        "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "PostgreSQL", "Drizzle ORM", "Auth.js"],
+        "github": "https://www.github.com/thesportydar/reis-app",
+        "live": "https://reis-app.onrender.com"
+    },
+    "estim": {
+        "name": "Estim Store",
+        "description": "<p>Es una aplicación full-stack construida con el <strong>stack MEAN</strong> que presenta un extenso catálogo de más de 27,000 videojuegos basado en un dataset de juegos de Steam. La plataforma permite a los usuarios explorar, buscar y filtrar títulos con información detallada sobre cada juego, ofreciendo una experiencia interactiva e intuitiva.</p>",
+        "tags": ["AngularJS", "Node.js", "Express", "MongoDB", "Mongoose"],
+        "github": "https://www.github.com/thesportydar/estim/tree/dev",
+        "live": "https://estim.onrender.com"
+    },
+    "api_rest": {
+        "name": "API REST",
+        "description": "<p>Es una <strong>API REST</strong> diseñada para gestionar el flujo completo de un sistema de compras en línea. Permite a los usuarios registrarse, autenticarse y explorar productos, mientras ofrece funcionalidades para agregar y actualizar artículos en un carrito de compras y procesar pedidos. La API sigue principios de <strong>arquitectura limpia</strong>, con una clara separación de responsabilidades y documentación detallada, lo que facilita su integración con aplicaciones front-end o móviles.</p>",
+        "tags": ["Spring Boot", "Spring Security", "Spring Data JPA", "JJWT", "PostgreSQL", "Swagger"],
+        "github": "https://www.github.com/thesportydar/shopping-cart"
+    },
+    "compiler": {
+        "name": "Compilador",
+        "description": "<p>Proyecto desarrollado como parte de la cursada de Diseño de Compiladores 1 2023. Consiste en un compilador de un lenguaje de programación propio. El compilador fue desarrollado en <strong>Java y YACC</strong>, y el codigo de salida es <strong>assembler pentium 32 bits</strong>.</p>",
+        "tags": ["Java", "YACC", "Assembly"],
+        "github": "https://www.github.com/thesportydar/compilador"
+    }
+}

@@ -1,0 +1,88 @@
+---
+import Skill from './Skill.astro';
+import SpringBoot from '@/assets/spring-boot.svg';
+import Java from '@/assets/java.svg';
+import AstroSvg from '@/assets/AstroOnLight.svg';
+import Python from '@/assets/python.svg';
+import TypeScript from '@/assets/typescript.svg';
+import Express from '@/assets/express.svg';
+import Postgres from '@/assets/postgres.svg';
+import Git from '@/assets/git.svg';
+import Mongo from '@/assets/mongo.svg';
+import BunSh from '@/assets/bun.svg';
+import Postman from '@/assets/postman.svg';
+import Docker from '@/assets/docker.svg';
+import Bash from '@/assets/bash.svg';
+import HtmlSvg from '@/assets/html.svg';
+import CssSvg from '@/assets/css.svg';
+---
+<div class="mx-auto w-full lg:max-w-5xl">
+    <div class="flex w-full items-center mb-16">
+        <hr class="border border-gray-300 flex-grow" />
+        <h1 class="text-gray-800 font-black text-2xl md:text-4xl text-center mx-8 hover:motion-preset-confetti">Tecnologías</h1>
+        <hr class="border border-gray-300 flex-grow" />
+    </div>
+
+
+    <div class="flex gap-2 justify-center flex-wrap">
+        <Skill text="Spring">
+            <SpringBoot width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="Java">
+            <Java width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="Astro">
+            <AstroSvg width={72} height={72} fill="white" />
+        </Skill>
+
+        <Skill text="TypeScript">
+            <TypeScript width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="Express">
+            <Express width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="Python">
+            <Python width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="PostgreSQL">
+            <Postgres width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="Git">
+            <Git width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="MongoDB">
+            <Mongo width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="BunSh">
+            <BunSh width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="Docker">
+            <Docker width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="Postman">
+            <Postman width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="Bash">
+            <Bash width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="HTML">
+            <HtmlSvg width={72} height={72} fill="currentColor" />
+        </Skill>
+
+        <Skill text="CSS">
+            <CssSvg width={72} height={72} fill="currentColor" />
+        </Skill>
+    </div>
+</div>

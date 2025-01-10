@@ -1,11 +1,29 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import About from '@/components/AboutMe.astro';
+import Skills from '@/components/Skills.astro';
+import MyProjects from '@/components/MyProjects.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+<script src="../scripts/local.js"></script>
 <Layout>
-	<Welcome />
+    <section class="bg-black justify-center flex flex-col motion-preset-slide-right motion-delay-0" style="height: calc(100vh - 3.5rem);">
+        <Welcome />
+    </section>
+
+    <div class="bg-white pt-32">
+        <section id="about" class="mb-32 opacity-0 intersect:translate-x-0 intersect:opacity-100 transition-all ease-out duration-300 md:intersect-half -translate-x-40 scroll-mt-20">
+            <About />
+        </section>
+
+        <section id="tecnologias" class="mb-32 opacity-0 intersect:translate-x-0 intersect:opacity-100 transition-all ease-out duration-300 md:intersect-half -translate-x-40 scroll-mt-20">
+            <Skills />
+        </section>
+
+        <section id="proyectos" class="pb-32 scroll-mt-20">
+            <MyProjects />
+        </section>
+    </div>
 </Layout>
