@@ -21,7 +21,7 @@
     },
     "compiler": {
         "name": "Compilador",
-        "description": "<p>Proyecto desarrollado como parte de la cursada de Diseño de Compiladores 1 2023. Consiste en un compilador de un lenguaje de programación propio. El compilador fue desarrollado en <strong>Java y YACC</strong>, y el codigo de salida es <strong>assembler pentium 32 bits</strong>.</p>",
+        "description": "<p>Proyecto desarrollado como parte de la cursada de Diseño de Compiladores 1 2023. Consiste en un compilador de un lenguaje de programación propio. El compilador fue desarrollado en <strong>Java</strong> utilizando la herramienta <strong>YACC</strong>, y el codigo de salida es ensamblador para la arquitectura <strong>x86 (pentium 32 bits)</strong>.</p>",
         "tags": ["Java", "YACC", "Assembly"],
         "github": "https://www.github.com/thesportydar/compilador"
     }

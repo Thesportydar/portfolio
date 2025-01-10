@@ -15,74 +15,74 @@ import Docker from '@/assets/docker.svg';
 import Bash from '@/assets/bash.svg';
 import HtmlSvg from '@/assets/html.svg';
 import CssSvg from '@/assets/css.svg';
+import Tailwind from '@/assets/tailwindcss-mark.svg';
+
+import SectionLayout from '@/layouts/SectionLayout.astro';
 ---
-<div class="mx-auto w-full lg:max-w-5xl">
-    <div class="flex w-full items-center mb-16">
-        <hr class="border border-gray-300 flex-grow" />
-        <h1 class="text-gray-800 font-black text-2xl md:text-4xl text-center mx-8 hover:motion-preset-confetti">Tecnologías</h1>
-        <hr class="border border-gray-300 flex-grow" />
-    </div>
-
-
+<SectionLayout id="tecnologias" title="Tecnologías">
     <div class="flex gap-2 justify-center flex-wrap">
         <Skill text="Spring">
-            <SpringBoot width={72} height={72} fill="currentColor" />
+            <SpringBoot class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="Java">
-            <Java width={72} height={72} fill="currentColor" />
+            <Java class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="Astro">
-            <AstroSvg width={72} height={72} fill="white" />
+            <AstroSvg class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="TypeScript">
-            <TypeScript width={72} height={72} fill="currentColor" />
+            <TypeScript class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="Express">
-            <Express width={72} height={72} fill="currentColor" />
+            <Express class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="Python">
-            <Python width={72} height={72} fill="currentColor" />
+            <Python class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="PostgreSQL">
-            <Postgres width={72} height={72} fill="currentColor" />
+            <Postgres class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="Git">
-            <Git width={72} height={72} fill="currentColor" />
+            <Git class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="MongoDB">
-            <Mongo width={72} height={72} fill="currentColor" />
+            <Mongo class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="BunSh">
-            <BunSh width={72} height={72} fill="currentColor" />
+            <BunSh class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="Docker">
-            <Docker width={72} height={72} fill="currentColor" />
+            <Docker class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="Postman">
-            <Postman width={72} height={72} fill="currentColor" />
+            <Postman class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="Bash">
-            <Bash width={72} height={72} fill="currentColor" />
+            <Bash class="size-12 md:size-16" fill="currentColor" />
+        </Skill>
+
+        <Skill text="TailwindCSS">
+            <Tailwind class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="HTML">
-            <HtmlSvg width={72} height={72} fill="currentColor" />
+            <HtmlSvg class="size-12 md:size-16" fill="currentColor" />
         </Skill>
 
         <Skill text="CSS">
-            <CssSvg width={72} height={72} fill="currentColor" />
+            <CssSvg class="size-12 md:size-16" fill="currentColor" />
         </Skill>
     </div>
-</div>
+</SectionLayout>

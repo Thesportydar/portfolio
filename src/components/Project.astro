@@ -14,35 +14,42 @@ interface Props {
 const {title, description, tags, imagePosition, githubLink, webLink} = Astro.props as Props;
 ---
 
-<div class={`opacity-0 intersect:translate-x-0 intersect:opacity-100 transition-all ease-out duration-300 intersect-half flex items-center gap-4 md:gap-8 ${imagePosition === 'right' ? 'flex-row-reverse translate-x-40' : '-translate-x-40'}`}>
-    <!-- Imagen -->
-    <div class="w-full md:w-[500px;] flex-shrink-0 aspect-w-16 aspect-h-9">
-        <slot />
-    </div>
+<div class={`opacity-0 intersect:translate-x-0 intersect:opacity-100 transition-all ease-out duration-300 md:intersect-half flex flex-col lg:flex-row items-center gap-4 lg:gap-8 overflow-hidden ${imagePosition === 'right' ? 'lg:flex-row-reverse translate-x-40' : '-translate-x-40'}`}>
 
     <!-- Contenido -->
-    <div class="flex-1 flex flex-col gap-4">
-
-        <div class="flex gap-2">
-            <h1 class="text-gray-800 font-bold text-xl md:text-4xl text-left">{title}</h1>
-
-            {githubLink &&
-            <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href={githubLink}><GithubMark width={48} height={48} /></a>
-            }
-
-            {webLink &&
-            <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href={webLink}><WebsiteMark width={48} height={48} /></a>
-            }
-
+    <div class="flex flex-col gap-4 text-center lg:text-left order-2 lg:order-1 flex-1">
+        <!-- Título y Links -->
+        <div class="flex gap-2 justify-center lg:justify-start items-center align-middle lg:items-start">
+            <h1 class="text-gray-800 font-bold text-3xl md:text-4xl">{title}</h1>
+            <div class="flex gap-2 items-center">
+                {githubLink && (
+                    <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href={githubLink}>
+                        <GithubMark class="size-10" />
+                    </a>
+                )}
+                {webLink && (
+                    <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href={webLink}>
+                        <WebsiteMark class="size-10" />
+                    </a>
+                )}
+            </div>
         </div>
 
-        <span class="text-lg text-gray-700"><Fragment set:html={description} /></span>
+        <!-- Descripción -->
+        <span class="text-lg text-gray-700 text-center">
+            <Fragment set:html={description} />
+        </span>
 
-        <div class="flex gap-2 flex-wrap">
-            {tags.map(tag => (
-                <span class="bg-gray-200 text-gray-600 px-2 py-1 rounded-md">{tag}</span>
+        <!-- Tags -->
+        <div class="flex gap-2 flex-wrap justify-center lg:justify-start">
+            {tags.map((tag) => (
+                <span class="bg-gray-200 text-gray-600 md:p-2 p-1 rounded-md">{tag}</span>
             ))}
         </div>
+    </div>
 
+    <!-- Imagen -->
+    <div class="w-full md:w-[500px] aspect-w-16 aspect-h-9 order-1 lg:order-2">
+        <slot />
     </div>
 </div>

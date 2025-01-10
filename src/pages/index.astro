@@ -9,21 +9,15 @@ import MyProjects from '@/components/MyProjects.astro';
 
 <script src="../scripts/local.js"></script>
 <Layout>
-    <section class="bg-black justify-center flex flex-col motion-preset-slide-right motion-delay-0" style="height: calc(100vh - 3.5rem);">
+    <section class="bg-black justify-center flex flex-col motion-preset-slide-right motion-delay-0" style="height: calc(100vh - 3rem);">
         <Welcome />
     </section>
 
-    <div class="bg-white pt-32">
-        <section id="about" class="mb-32 opacity-0 intersect:translate-x-0 intersect:opacity-100 transition-all ease-out duration-300 md:intersect-half -translate-x-40 scroll-mt-20">
-            <About />
-        </section>
+    <div class="bg-white py-16 lg:py-32 flex flex-col gap-16 lg:gap-32">
+        <About />
 
-        <section id="tecnologias" class="mb-32 opacity-0 intersect:translate-x-0 intersect:opacity-100 transition-all ease-out duration-300 md:intersect-half -translate-x-40 scroll-mt-20">
-            <Skills />
-        </section>
+        <Skills />
 
-        <section id="proyectos" class="pb-32 scroll-mt-20">
-            <MyProjects />
-        </section>
+        <MyProjects />
     </div>
 </Layout>
