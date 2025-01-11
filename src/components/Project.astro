@@ -14,7 +14,7 @@ interface Props {
 const {title, description, tags, imagePosition, githubLink, webLink} = Astro.props as Props;
 ---
 
-<div class={`opacity-0 intersect:translate-x-0 intersect:opacity-100 transition-all ease-out duration-300 md:intersect-half flex flex-col lg:flex-row items-center gap-4 lg:gap-8 overflow-hidden ${imagePosition === 'right' ? 'lg:flex-row-reverse translate-x-40' : '-translate-x-40'}`}>
+<div class={`opacity-0 intersect:translate-x-0 intersect:opacity-100 transition-all ease-out duration-300 flex flex-col lg:flex-row items-center gap-4 lg:gap-8 overflow-hidden ${imagePosition === 'right' ? 'lg:flex-row-reverse translate-x-40' : '-translate-x-40'}`}>
 
     <!-- Contenido -->
     <div class="flex flex-col gap-4 text-center lg:text-left order-2 lg:order-1 flex-1">
@@ -23,12 +23,12 @@ const {title, description, tags, imagePosition, githubLink, webLink} = Astro.pro
             <h1 class="text-gray-800 font-bold text-3xl md:text-4xl">{title}</h1>
             <div class="flex gap-2 items-center">
                 {githubLink && (
-                    <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href={githubLink}>
+                    <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href={githubLink} target="_blank">
                         <GithubMark class="size-10" />
                     </a>
                 )}
                 {webLink && (
-                    <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href={webLink}>
+                    <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href={webLink} target="_blank">
                         <WebsiteMark class="size-10" />
                     </a>
                 )}
@@ -36,7 +36,7 @@ const {title, description, tags, imagePosition, githubLink, webLink} = Astro.pro
         </div>
 
         <!-- Descripción -->
-        <span class="text-lg text-gray-700 text-center">
+        <span class="text-base md:text-lg text-gray-700 text-justify">
             <Fragment set:html={description} />
         </span>
 
@@ -49,7 +49,7 @@ const {title, description, tags, imagePosition, githubLink, webLink} = Astro.pro
     </div>
 
     <!-- Imagen -->
-    <div class="w-full md:w-[500px] aspect-w-16 aspect-h-9 order-1 lg:order-2">
+    <div class="w-full sm:w-[500px] aspect-w-16 aspect-h-9 order-1 lg:order-2">
         <slot />
     </div>
 </div>
