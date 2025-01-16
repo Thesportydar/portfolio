@@ -23,12 +23,12 @@ const {title, description, tags, imagePosition, githubLink, webLink} = Astro.pro
             <h1 class="text-gray-800 font-bold text-3xl md:text-4xl" aria-label="Titulo del proyecto">{title}</h1>
             <div class="flex gap-2 items-center">
                 {githubLink && (
-                    <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href={githubLink} aria-label="Link al repositorio de Github" target="_blank" rel="noopener noreferrer">
+                    <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href={githubLink} target="_blank" rel="noopener noreferrer">
                         <GithubMark class="size-10" />
                     </a>
                 )}
                 {webLink && (
-                    <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href={webLink} aria-label="Link al sitio web" target="_blank" rel="noopener noreferrer">
+                    <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href={webLink} target="_blank" rel="noopener noreferrer">
                         <WebsiteMark class="size-10" />
                     </a>
                 )}
@@ -36,7 +36,7 @@ const {title, description, tags, imagePosition, githubLink, webLink} = Astro.pro
         </div>
 
         <!-- Descripción -->
-        <span class="text-base md:text-lg text-gray-700 text-justify" aria-label="Descripción del proyecto">
+        <span class="text-base md:text-lg text-gray-700 text-justify">
             <Fragment set:html={description} />
         </span>
 
