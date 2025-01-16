@@ -1,27 +1,87 @@
 ---
 
 ---
-<header id="header" class="sticky top-0 z-50 text-white font-extrabold text-base md:text-xl pr-2 md:pr-8 shadow-xl flex items-center motion-preset-slide-right motion-delay-0">
-    <a href="/" class="p-2 md:p-4">Iñaqui</a>
+<header id="header" class="sticky top-0 z-50 text-white font-extrabold text-base md:text-xl px-4 lg:px-8 shadow-xl flex items-center justify-between p-4">
+    <a href="/">Iñaqui</a>
 
-    <span class="flex-1"></span>
+    <button id="menu-toggle" class="sm:hidden p-2 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </button>
 
-    <nav class="p-4">
-        <ul class="flex space-x-4">
-            <li class="transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400"><a href="#about" aria-label="Acerca">Acerca</a></li>
-            <li class="transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400"><a href="#tecnologias" aria-label="Tecnologias">Tecnologías</a></li>
-            <li class="transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400"><a href="#proyectos" aria-label="Proyectos">Proyectos</a></li>
+    <!-- Add transition -->
+    <nav id="menu" class="hidden absolute top-full text-white left-0 w-full shadow-lg sm:static sm:block sm:w-auto sm:shadow-none border-y sm:border-y-0 border-gray-700 shadow-white/20">
+        <ul class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 p-4 sm:p-0">
+            <li><a href="#about" aria-label="Acerca" class="block transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400">Acerca</a></li>
+            <li><a href="#tecnologias" aria-label="Tecnologías" class="block transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400">Tecnologías</a></li>
+            <li><a href="#experiencia" aria-label="Experiencia" class="block transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400">Experiencia</a></li>
+            <li><a href="#proyectos" aria-label="Proyectos" class="block transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400">Proyectos</a></li>
         </ul>
     </nav>
 </header>
 
-<script>
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > window.innerHeight) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
+<style>
+    header.scrolled #menu {
+        border-color: #e5e7eb;
+        --tw-shadow-color: rgba(0, 0, 0, 0.2);
+        --tw-shadow: var(--tw-shadow-colored);
     }
+
+    header::before, #menu::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: black;
+            transition: background 0.3s ease;
+            z-index: -1;
+        }
+
+    header.scrolled::before, header.scrolled #menu::before {
+        background: white;
+    }
+
+    header.scrolled, header.scrolled #menu {
+        color: black;
+    }
+
+    header .nav {
+        position: relative;
+        z-index: 10;
+    }
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('header');
+    const menu = document.getElementById('menu');
+    const menuToggle = document.getElementById('menu-toggle');
+
+    if (!header || !menu || !menuToggle) {
+        return
+    }
+
+    menuToggle.addEventListener('click', function () {
+        menu.classList.toggle('hidden');
+    });
+
+    menu.addEventListener('click', function () {
+        menu.classList.toggle('hidden');
+    });
+
+    function handleScroll() {
+        if (window.scrollY > window.innerHeight) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
 });
 </script>

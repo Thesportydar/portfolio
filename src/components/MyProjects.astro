@@ -10,7 +10,7 @@ import SectionLayout from "@/layouts/SectionLayout.astro";
 ---
 <SectionLayout id="proyectos" title="Proyectos">
     <div class="flex flex-col gap-16 overflow-x-hidden">
-        <Project title={projects.reis.name} description={projects.reis.description} tags={projects.reis.tags} imagePosition="left" githubLink={projects.reis.github} webLink={projects.reis.live}>
+        <Project title={projects.reis.name} description={projects.reis.description} tags={projects.reis.tags} imagePosition="left" webLink={projects.reis.live}>
             <img src={ReisDemo.src} alt="Reis Demo" class="w-full object-cover rounded-md" />
         </Project>
 
@@ -18,7 +18,7 @@ import SectionLayout from "@/layouts/SectionLayout.astro";
             <img src={EstimDemo.src} alt="Estim Demo" class="w-full object-cover rounded-md" />
         </Project>
 
-        <Project title={projects.api_rest.name} description={projects.api_rest.description} tags={projects.api_rest.tags} imagePosition="left" githubLink={projects.api_rest.github}>
+        <Project title={projects.api_rest.name} description={projects.api_rest.description} tags={projects.api_rest.tags} imagePosition="left" githubLink={projects.api_rest.github} webLink={projects.api_rest.live}>
             <img src={ApiRestDemo.src} alt="API REST Demo" class="w-full object-cover rounded-md" />
         </Project>
 

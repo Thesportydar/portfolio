@@ -3,7 +3,6 @@
         "name": "REIS",
         "description": "<p>Plataforma web tipo <strong>classroom</strong> diseñada para apoyar la enseñanza mediante <strong>Recorridos de Estudio e Investigacion(REIs)</strong>, organizando el aprendizaje en torno a preguntas y respuestas. Facilita la interacción entre estudiantes y entre estudiantes y profesores, permitiendo la colaboración en tiempo real y el seguimiento centralizado del progreso académico.</p>",
         "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "PostgreSQL", "Drizzle ORM", "Auth.js"],
-        "github": "https://www.github.com/thesportydar/reis-app",
         "live": "https://reis-app.onrender.com"
     },
     "estim": {
@@ -17,7 +16,8 @@
         "name": "API REST",
         "description": "<p><strong>API REST</strong> diseñada para gestionar el flujo completo de un sistema de compras en línea. Permite a los usuarios registrarse, autenticarse y explorar productos, mientras ofrece funcionalidades para agregar y actualizar artículos en un carrito de compras y procesar pedidos. La API sigue principios de <strong>arquitectura limpia</strong>, con una clara separación de responsabilidades y documentación detallada, lo que facilita su integración con aplicaciones front-end o móviles.</p>",
         "tags": ["Spring Boot", "Spring Security", "Spring Data JPA", "JJWT", "PostgreSQL", "Swagger"],
-        "github": "https://www.github.com/thesportydar/shopping-cart"
+        "github": "https://www.github.com/thesportydar/shopping-cart",
+        "live": "https://thesportydar.github.io/shopping-cart-api-docs"
     },
     "compiler": {
         "name": "Compilador",

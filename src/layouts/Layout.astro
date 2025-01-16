@@ -30,32 +30,5 @@ import Header from '@/components/Header.astro';
             font-family: var(--font-family);
             --scroll-position: 0;
         }
-
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: transparent;
-            transition: background 0.3s ease;
-            z-index: -1;
-        }
-
-        header.scrolled::before {
-            background: white;
-        }
-
-        header.scrolled {
-            color: black;
-            border-bottom: 1px solid #eaeaea;
-        }
-
-        header .nav {
-            position: relative;
-            z-index: 10;
-        }
-
     </style>
 </html>
