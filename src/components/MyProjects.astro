@@ -4,6 +4,8 @@ import ReisDemo from "@/assets/reis-demo.png";
 import EstimDemo from "@/assets/estim-demo.png";
 import ApiRestDemo from "@/assets/api-rest-demo.png";
 import CompilerDemo from "@/assets/compiler-demo.png";
+import SpellcheckerDemo from "@/assets/spellchecker.png";
+import AutoencoderDemo from "@/assets/autoencoder.png";
 
 import projects from "@/assets/my-projects.json";
 import SectionLayout from "@/layouts/SectionLayout.astro";
@@ -24,6 +26,14 @@ import SectionLayout from "@/layouts/SectionLayout.astro";
 
         <Project title={projects.compiler.name} description={projects.compiler.description} tags={projects.compiler.tags} imagePosition="right" githubLink={projects.compiler.github}>
             <img src={CompilerDemo.src} alt="Compiler Demo" class="w-full object-cover rounded-md" />
+        </Project>
+
+        <Project title={projects.spellchecker.name} description={projects.spellchecker.description} tags={projects.spellchecker.tags} imagePosition="left" githubLink={projects.spellchecker.github}>
+            <img src={SpellcheckerDemo.src} alt="Spellchecker Demo" class="w-full object-cover rounded-md" />
+        </Project>
+
+        <Project title={projects.autoencoder.name} description={projects.autoencoder.description} tags={projects.autoencoder.tags} imagePosition="right" webLink={projects.autoencoder.live}>
+            <img src={AutoencoderDemo.src} alt="Autoencoder Demo" class="w-full object-cover rounded-md" />
         </Project>
 
     </div>

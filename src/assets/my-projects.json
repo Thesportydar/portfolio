@@ -24,5 +24,17 @@
         "description": "<p>Proyecto desarrollado como parte de la cursada de Diseño de Compiladores 1 2023. Consiste en un compilador de un lenguaje de programación propio. El compilador fue desarrollado en <strong>Java</strong> utilizando la herramienta <strong>YACC</strong>, y el codigo de salida es ensamblador para la arquitectura <strong>x86 (pentium 32 bits)</strong>.</p>",
         "tags": ["Java", "YACC", "Assembly"],
         "github": "https://www.github.com/thesportydar/compilador"
+    },
+    "spellchecker": {
+        "name": "Corrector Ortográfico",
+        "description": "<p>Este proyecto se creo en el marco del trabajo final del taller de programacion en Java Consiste en la implementación de un <strong>corrector ortográfico en Java</strong>, que abarca diversas funcionalidades para el procesamiento de texto, la detección de errores y la sugerencia de correcciones. Implementa 4 tipos de correctores: Basado en Diccionario de correciones, basado en permutaciones adyacentes, y dos de <strong>Levenshtein</strong>, uno basado en map y otro en <strong>trie</strong>.</p>",
+        "tags": ["Java", "Trie", "Levenshtein", "Junit", "Benchmark", "JMH"],
+        "github": "https://www.github.com/thesportydar/spellchecker"
+    },
+    "autoencoder": {
+        "name": "MRI Anomaly Detector",
+        "description": "<p>Detector de tumores cerebrales en imagenes de resonancias mageneticas a partir de <strong>autoencoders</strong> usando <strong>aprendizaje no supervisado</strong>. Se utilizo una arquitectura sencialla para enfocarse en el entendimiento del proceso de detección de anomalias a partir de autoencoders. No se usaron bloques residuales ni técnicas de regularización como dropout o batch normalization.</p>",
+        "tags": ["Python", "TensorFlow", "Keras", "Colab"],
+        "live": "https://colab.research.google.com/drive/1m856pNYCyWsdoSDelg4UDoTKufmgVGNL?usp=sharing"
     }
 }
