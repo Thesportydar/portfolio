@@ -1,15 +1,23 @@
 ---
 import SectionLayout from "@/layouts/SectionLayout.astro";
 import Job from "./Job.astro";
+import {jobsTranslations} from '@/i18n/jobs.ts';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const uiT = useTranslations(lang);
+const t = jobsTranslations[lang];
 ---
-<SectionLayout id="experiencia" title="Experiencia">
-    <Job
-        title="Fullstack Developer",
-        company="ISISTAN - CONICET-UNICEN",
-        location="Tandil, Buenos Aires",
-        isRemote={true},
-        duration="ago. 2024 - nov. 2024",
-        description="Practicas profesionales supervisadas en desarrollo de software en el marco de un proyecto de investigación en ISISTAN, CONICET-UNICEN. Consistio en el desarrollo de una plataforma web para facilitar la enseñanza mediante Recorridos de Estudio e Investigación (REIs). Colaboré estrechamente con los directores del proyecto en la investigación, diseño e implementación de la solución, así como en la documentación del proyecto. Trabaje bajo la supervisión del Dr. Alejandro Zunino, director, y la Dra. Daniela Godoy, co-directora."
-        technologies={["Astro.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Bun.sh", "Preact", "HTMx", "Docker", "Drizzle-ORM", "Auth.js", "Git"]}
-    />
+<SectionLayout id={uiT('nav.experience').href} title={t.title}>
+    {t.jobs.map((job) => (
+        <Job
+            title={job.title}
+            company={job.company}
+            location={job.location}
+            isRemote={job.isRemote}
+            duration={job.duration}
+            description={job.description}
+            technologies={job.technologies}
+        />
+    ))}
 </SectionLayout>

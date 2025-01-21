@@ -1,8 +1,12 @@
 ---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import LanguagePicker from '@/components/LanguagePicker.astro';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
-<header id="header" class="sticky top-0 z-50 text-white font-extrabold text-base md:text-xl px-4 lg:px-8 shadow-xl flex items-center justify-between p-4">
-    <a href="/">Iñaqui</a>
+<header id="header" class="sticky top-0 z-50 text-white font-extrabold text-base md:text-xl px-4 lg:px-8 shadow-xl flex items-center justify-between p-4 motion-preset-slide-right motion-delay-[0ms] motion-duration-500">
+    <a href={"/" + lang}>Iñaqui</a>
 
     <button id="menu-toggle" class="sm:hidden p-2 focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -13,10 +17,26 @@
     <!-- Add transition -->
     <nav id="menu" class="hidden absolute top-full text-white left-0 w-full shadow-lg sm:static sm:block sm:w-auto sm:shadow-none border-y sm:border-y-0 border-gray-700 shadow-white/20">
         <ul class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 p-4 sm:p-0">
-            <li><a href="#about" aria-label="Acerca" class="block transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400">Acerca</a></li>
-            <li><a href="#tecnologias" aria-label="Tecnologías" class="block transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400">Tecnologías</a></li>
-            <li><a href="#experiencia" aria-label="Experiencia" class="block transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400">Experiencia</a></li>
-            <li><a href="#proyectos" aria-label="Proyectos" class="block transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400">Proyectos</a></li>
+
+            <li>
+                <a href={"#" + t('nav.about').href} aria-label={t('nav.about').text} class="block transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400">{t('nav.about').text}</a>
+            </li>
+
+            <li>
+                <a href={"#" + t('nav.technologies').href} aria-label={t('nav.technologies').text} class="block transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400">{t('nav.technologies').text}</a>
+            </li>
+
+            <li>
+                <a href={"#" + t('nav.experience').href} aria-label={t('nav.experience').text} class="block transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400">{t('nav.experience').text}</a>
+            </li>
+
+            <li>
+                <a href={"#" + t('nav.projects').href} aria-label={t('nav.projects').text} class="block transform transition-all hover:translate-y-1 hover:underline underline-offset-8 decoration-2 decoration-gray-400">{t('nav.projects').text}</a>
+            </li>
+
+            <li>
+                <LanguagePicker />
+            </li>
         </ul>
     </nav>
 </header>

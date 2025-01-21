@@ -8,6 +8,18 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
     integrations: [tailwind(), sitemap()],
 
+    i18n: {
+        defaultLocale: "es",
+        locales: ["es", "en"],
+        routing: {
+            prefixDefaultLocale: true,
+            redirectToDefaultLocale: true
+        },
+        fallback: {
+            "en": "es"
+        }
+    },
+
     experimental: {
         svg: true,
     },

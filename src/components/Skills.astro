@@ -1,89 +1,29 @@
 ---
 import Skill from './Skill.astro';
-import SpringBoot from '@/assets/spring-boot.svg';
-import Java from '@/assets/java.svg';
-import AstroSvg from '@/assets/AstroOnLight.svg';
-import Python from '@/assets/python.svg';
-import TypeScript from '@/assets/typescript.svg';
-import Express from '@/assets/express.svg';
-import Postgres from '@/assets/postgres.svg';
-import Git from '@/assets/git.svg';
-import Mongo from '@/assets/mongo.svg';
-import BunSh from '@/assets/bun.svg';
-import Postman from '@/assets/postman.svg';
-import Docker from '@/assets/docker.svg';
-import Bash from '@/assets/bash.svg';
-import CSvg from '@/assets/c.svg';
-import AngularJs from '@/assets/angularjs.svg';
-import Tailwind from '@/assets/tailwindcss-mark.svg';
-
 import SectionLayout from '@/layouts/SectionLayout.astro';
+import {skillsTranslations} from '@/i18n/skills.ts';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/skills/*.svg');
+
+const lang = getLangFromUrl(Astro.url);
+const uiT = useTranslations(lang);
+const t = skillsTranslations[lang];
 ---
-<SectionLayout id="tecnologias" title="Tecnologías">
+<SectionLayout id={uiT('nav.technologies').href} title={t.title}>
     <div class="flex gap-x-2 gap-y-4 justify-center flex-wrap ">
-        <Skill text="Spring">
-            <SpringBoot class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
+        {Object.entries(images).map(([path, image]) => {
+        const img = image();
+        const text = path.replace('/src/assets/skills/', '').replace('.svg', '');
 
-        <Skill text="Java">
-            <Java class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
+        return (
+            <Skill text={text}>
+                <Image src={img} alt={path} class="size-12 md:size-16" />
+            </Skill>
+            )
+        })}
 
-        <Skill text="Astro">
-            <AstroSvg class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="TypeScript">
-            <TypeScript class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="Express">
-            <Express class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="Python">
-            <Python class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="PostgreSQL">
-            <Postgres class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="Git">
-            <Git class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="MongoDB">
-            <Mongo class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="BunSh">
-            <BunSh class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="Docker">
-            <Docker class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="Postman">
-            <Postman class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="Bash">
-            <Bash class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="C/C++">
-            <CSvg class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="AngularJS">
-            <AngularJs class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-        <Skill text="TailwindCSS">
-            <Tailwind class="size-12 md:size-16" fill="currentColor" />
-        </Skill>
-
-    </div>
+            </div>
 </SectionLayout>

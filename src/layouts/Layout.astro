@@ -1,9 +1,12 @@
 ---
 import Header from '@/components/Header.astro';
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
@@ -24,7 +27,7 @@ import Header from '@/components/Header.astro';
 
     <style is:global>
         :root {
-            --font-family: Inter, ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            --font-family: Inter, Roboto, ibm-plex-sans, system-ui, sans-serif;
         }
 
         body {
