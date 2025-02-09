@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
-    <link rel="canonical" href="https://inaqui.me/es" />
-    <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=/es" />
-  </head>
-  <body>
-    <p>Redirecting...</p>
-  </body>
+    <link rel="canonical" href="https://inaqui.me/es">
+    <link rel="alternate" hreflang="es" href="https://inaqui.me/es">
+    <link rel="alternate" hreflang="en" href="https://inaqui.me/en">
+</head>
+<body>
+    <p>Redirigiendo... Si no eres redirigido automáticamente, elige tu idioma:</p>
+    <ul>
+        <li><a href="/es">Español</a></li>
+        <li><a href="/en">English</a></li>
+    </ul>
+    <script>
+        const userLang = navigator.language || "es";
+        if (userLang.startsWith("es")) {
+            window.location.href = "/es";
+        } else {
+            window.location.href = "/en";
+        }
+    </script>
+</body>
 </html>
