@@ -5,7 +5,7 @@ export const projectsTranslations = {
             {
                 "name": "REIS",
                 "description": "<p>Plataforma web tipo <strong>classroom</strong> diseñada para apoyar la enseñanza mediante <strong>Recorridos de Estudio e Investigacion(REIs)</strong>, organizando el aprendizaje en torno a preguntas y respuestas. Facilita la interacción entre estudiantes y entre estudiantes y profesores, permitiendo la colaboración en tiempo real y el seguimiento centralizado del progreso académico.</p><p><strong>Usuario: </strong>usuario@demo.com <strong>Contraseña: </strong>password</p>",
-                "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "PostgreSQL", "Drizzle ORM", "Auth.js"],
+                "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "PostgreSQL", "Drizzle ORM", "Auth.js", "Redis", "Python", "Microservice"],
                 "live": "https://reis-app-75259831351b.herokuapp.com",
                 "image": "reis-demo.png"
             },
@@ -54,7 +54,7 @@ export const projectsTranslations = {
             {
                 "name": "REIS",
                 "description": "<p><strong>Classroom-type</strong> web platform designed to support teaching through <strong>Study and Research Paths (SRP)</strong>, organizing learning around questions and answers. It facilitates interaction between students and between students and teachers, allowing real-time collaboration and centralized monitoring of academic progress.</p><p><strong>User: </strong>usuario@demo.com <strong>Password: </strong>password</p>",
-                "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "PostgreSQL", "Drizzle ORM", "Auth.js"],
+                "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "PostgreSQL", "Drizzle ORM", "Auth.js", "Redis", "Python", "Microservice"],
                 "live": "https://reis-app-75259831351b.herokuapp.com",
                 "image": "reis-demo.png"
             },
