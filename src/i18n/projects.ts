@@ -42,7 +42,7 @@ export const projectsTranslations = {
             },
             {
                 "name": "Corrector Ortográfico",
-                "description": "<p>Este proyecto se creo en el marco del trabajo final del taller de programacion en Java Consiste en la implementación de un <strong>corrector ortográfico en Java</strong>, que abarca diversas funcionalidades para el procesamiento de texto, la detección de errores y la sugerencia de correcciones. Implementa 4 tipos de correctores: Basado en Diccionario de correciones, basado en permutaciones adyacentes, y dos de <strong>Levenshtein</strong>, uno basado en map y otro en <strong>trie</strong>.</p>",
+                "description": "<p>Este proyecto se creo en el marco del trabajo final del taller de programacion en Java. Consiste en la implementación de un <strong>corrector ortográfico en Java</strong>, que abarca diversas funcionalidades para el procesamiento de texto, la detección de errores y la sugerencia de correcciones. Implementa 4 tipos de correctores: Basado en Diccionario de correciones, basado en permutaciones adyacentes, y dos de <strong>Levenshtein</strong>, uno basado en map y otro en <strong>trie</strong>.</p>",
                 "tags": ["Java", "Trie", "Levenshtein", "Junit", "Benchmark", "JMH"],
                 "github": "https://www.github.com/thesportydar/spellchecker",
                 "image": "spellchecker.png"
