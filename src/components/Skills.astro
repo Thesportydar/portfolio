@@ -1,29 +1,18 @@
 ---
-import Skill from './Skill.astro';
 import SectionLayout from '@/layouts/SectionLayout.astro';
 import {skillsTranslations} from '@/i18n/skills.ts';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
+import SkillCategory from './SkillCategory.astro';
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/skills/*.svg');
 
 const lang = getLangFromUrl(Astro.url);
 const uiT = useTranslations(lang);
 const t = skillsTranslations[lang];
 ---
 <SectionLayout id={uiT('nav.technologies').href} title={t.title}>
-    <div class="flex gap-x-2 gap-y-4 justify-center flex-wrap ">
-        {Object.entries(images).map(([path, image]) => {
-        const img = image();
-        const text = path.replace('/src/assets/skills/', '').replace('.svg', '');
-
-        return (
-            <Skill text={text}>
-                <Image src={img} alt={path} class="size-12 md:size-16" />
-            </Skill>
-            )
-        })}
-
-            </div>
+    <div class="grid lg:grid-cols-3 gap-4">
+        <SkillCategory title={"Backend"} description={"Backend description"} imgPrefix="back" />
+        <SkillCategory title={"Frontend"} description={"Frontend description"} imgPrefix="front" />
+        <SkillCategory title={"DevOps & Systems"} description={"Tools description"} imgPrefix="tool" />
+    </div>
 </SectionLayout>

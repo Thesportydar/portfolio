@@ -6,7 +6,7 @@ export const projectsTranslations = {
                 "name": "REIS",
                 "description": "<p>Plataforma web tipo <strong>classroom</strong> diseñada para apoyar la enseñanza mediante <strong>Recorridos de Estudio e Investigacion(REIs)</strong>, organizando el aprendizaje en torno a preguntas y respuestas. Facilita la interacción entre estudiantes y entre estudiantes y profesores, permitiendo la colaboración en tiempo real y el seguimiento centralizado del progreso académico.</p><p><strong>Usuario: </strong>usuario@demo.com <strong>Contraseña: </strong>password</p>",
                 "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "PostgreSQL", "Drizzle ORM", "Auth.js", "Redis", "Python", "Microservice"],
-                "live": "https://reis-app-75259831351b.herokuapp.com",
+                "live": "https://reis-app.inaqui.me",
                 "image": "reis-demo.png"
             },
             {
@@ -18,7 +18,7 @@ export const projectsTranslations = {
                 "image": "estim-demo.png"
             },
             {
-                "name": "Ecommerce API REST",
+                "name": "API REST",
                 "description": "<p><strong>API REST</strong> diseñada para gestionar el flujo completo de un sistema de compras en línea. Permite a los usuarios registrarse, autenticarse y explorar productos, mientras ofrece funcionalidades para agregar y actualizar artículos en un carrito de compras y procesar pedidos. La API sigue principios de <strong>arquitectura limpia</strong>, con una clara separación de responsabilidades y documentación detallada, lo que facilita su integración con aplicaciones front-end o móviles.</p>",
                 "tags": ["Spring Boot", "Spring Security", "Spring Data JPA", "JJWT", "PostgreSQL", "Swagger"],
                 "github": "https://www.github.com/thesportydar/shopping-cart",
@@ -27,10 +27,10 @@ export const projectsTranslations = {
             },
             {
                 "name": "Acortador de URLs",
-                "description": "<p>Aplicación web para acortar URLs de forma sencilla y rápida. Permite a los usuarios acortar enlaces largos y personalizar la URL corta. La aplicación fue desarrollada con <strong>Spring Boot</strong> y <strong>PostgreSQL</strong> en el backend, y <strong>Astro</strong> y <strong>Preact</strong> en el frontend.</p>",
-                "tags": ["Spring Boot", "PostgreSQL", "Astro", "Preact", "TailwindCSS"],
+                "description": "<p>Aplicación web para acortar URLs de forma sencilla y rápida. Permite a los usuarios acortar enlaces largos y personalizar la URL corta. La aplicación fue desarrollada con <strong>Spring Boot</strong> y <strong>PostgreSQL</strong> en el backend, y <strong>Astro</strong> y <strong>Preact</strong> en el frontend. Ademas cuenta con un <strong>sistema de caching</strong> a traves de <strong>Redis</strong> para mejorar la velocidad de acceso a las URLs acortadas.</p>",
+                "tags": ["Spring Boot", "PostgreSQL", "Astro", "Preact", "TailwindCSS", "Redis"],
                 "github": "https://www.github.com/thesportydar/url-shortener-backend",
-                "live": "http://link.inaqui.me/",
+                "live": "https://link.inaqui.me/",
                 "image": "shortener.png"
             },
             {
@@ -63,7 +63,7 @@ export const projectsTranslations = {
                 "name": "REIS",
                 "description": "<p><strong>Classroom-type</strong> web platform designed to support teaching through <strong>Study and Research Paths (SRP)</strong>, organizing learning around questions and answers. It facilitates interaction between students and between students and teachers, allowing real-time collaboration and centralized monitoring of academic progress.</p><p><strong>User: </strong>usuario@demo.com <strong>Password: </strong>password</p>",
                 "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "PostgreSQL", "Drizzle ORM", "Auth.js", "Redis", "Python", "Microservice"],
-                "live": "https://reis-app-75259831351b.herokuapp.com",
+                "live": "https://reis-app.inaqui.me",
                 "image": "reis-demo.png"
             },
             {
@@ -75,7 +75,7 @@ export const projectsTranslations = {
                 "image": "estim-demo.png"
             },
             {
-                "name": "Ecommerce API REST",
+                "name": "API REST",
                 "description": "<p><strong>REST API</strong> designed to manage the complete flow of an online shopping system. Allows users to register, authenticate and explore products, while offering functionalities to add and update items in a shopping cart and process orders. The API follows <strong>clean architecture</strong> principles, with a clear separation of responsibilities and detailed documentation, making it easy to integrate with front-end or mobile applications.</p>",
                 "tags": ["Spring Boot", "Spring Security", "Spring Data JPA", "JJWT", "PostgreSQL", "Swagger"],
                 "github": "https://www.github.com/thesportydar/shopping-cart",
@@ -84,10 +84,10 @@ export const projectsTranslations = {
             },
             {
                 "name": "URL Shortener",
-                "description": "<p>Web application to shorten URLs quickly and easily. Allows users to shorten long links and customize the short URL. The application was developed with <strong>Spring Boot</strong> and <strong>PostgreSQL</strong> in the backend, and <strong>Astro</strong> and <strong>Preact</strong> in the frontend.</p>",
-                "tags": ["Spring Boot", "PostgreSQL", "Astro", "Preact", "TailwindCSS"],
+                "description": "<p>Web application to shorten URLs quickly and easily. Allows users to shorten long links and customize the short URL. The application was developed with <strong>Spring Boot</strong> and <strong>PostgreSQL</strong> in the backend, and <strong>Astro</strong> and <strong>Preact</strong> in the frontend. It also has a <strong>caching system</strong> through <strong>Redis</strong> to improve the speed of access to shortened URLs.</p>",
+                "tags": ["Spring Boot", "PostgreSQL", "Astro", "Preact", "TailwindCSS", "Redis"],
                 "github": "https://www.github.com/thesportydar/url-shortener-backend",
-                "live": "http://link.inaqui.me/",
+                "live": "https://link.inaqui.me/",
                 "image": "shortener.png"
             },
             {

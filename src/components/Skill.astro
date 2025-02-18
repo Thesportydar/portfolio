@@ -1,12 +1,14 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
     text: string;
+    imgMeta: Promise<{default: ImageMetadata}>;
 }
 
-const {text} = Astro.props as Props;
+const {text, imgMeta} = Astro.props as Props;
 ---
-
-<div class="flex flex-col gap-2 items-center justify-between shadow-lg border p-2 md:p-3 hover:-translate-y-3 ease-out transition-all duration-200" aria-label="Habilidad o tecnologia">
-    <slot />
-    <p class="text-gray-600 text-sm md:text-lg font-bold">{text}</p>
+<div class="flex flex-col gap-2 items-center justify-center shadow-lg border p-2 md:p-3 hover:-translate-y-3 ease-out transition-all duration-200" aria-label="Habilidad o tecnologia">
+    <Image src={imgMeta} alt={text} class="size-12 md:size-16" />
+    <p class="text-gray-600 font-semibold text-center">{text}</p>
 </div>
