@@ -4,10 +4,16 @@ export const projectsTranslations = {
         "projects": [
             {
                 "name": "REIS",
-                "description": "<p>Plataforma web tipo <strong>classroom</strong> diseñada para apoyar la enseñanza mediante <strong>Recorridos de Estudio e Investigacion(REIs)</strong>, organizando el aprendizaje en torno a preguntas y respuestas. Facilita la interacción entre estudiantes y entre estudiantes y profesores, permitiendo la colaboración en tiempo real y el seguimiento centralizado del progreso académico.</p><p><strong>Usuario: </strong>usuario@demo.com <strong>Contraseña: </strong>password</p>",
-                "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "PostgreSQL", "Drizzle ORM", "Auth.js", "Redis", "Python", "Microservice"],
-                "live": "https://reis-app.inaqui.me",
+                "description": "<p>Plataforma web tipo <strong>classroom</strong> diseñada para apoyar la enseñanza mediante <strong>Recorridos de Estudio e Investigacion(REIs)</strong>, organizando el aprendizaje en torno a preguntas y respuestas. Permite colaboración en tiempo real, seguimiento del progreso académico y análisis automático de datos educativos mediante técnicas de <strong>IA</strong>.</p><p><strong>Usuario: </strong>usuario@demo.com <strong>Contraseña: </strong>password</p>",
+                "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "SQLite", "Redis", "Python", "Sentece Transformers", "Docker"],
+                "live": "https://rei.apps.inaqui.me",
                 "image": "reis-demo.png"
+            },
+            {
+                "name": "Infraestructura personal en la nube",
+                "description": "<p>Configuración y mantenimiento de una <strong>infraestructura autoalojada en la nube</strong> sobre un VPS (DigitalOcean), utilizada para el despliegue y monitoreo de múltiples apps personales mediante <strong>Coolify</strong>. Incluye una <strong>VPN privada (WireGuard)</strong> para comunicación segura entre dispositivos, un <strong>servidor S3 self-hosted (MinIO)</strong> con control de accesos y expiración de enlaces, y configuración avanzada de firewall, DNS, dominios personalizados, proxy inverso y certificados SSL.</p>",
+                "tags": ["Linux", "Digital Ocean", "Coolify", "MinIO", "WireGuard", "Docker", "Nginx", "DNS", "SSL", "DevOps"],
+                "image": "infra-demo.png"
             },
             {
                 "name": "Estim Store",
@@ -61,10 +67,16 @@ export const projectsTranslations = {
         "projects": [
             {
                 "name": "REIS",
-                "description": "<p><strong>Classroom-type</strong> web platform designed to support teaching through <strong>Study and Research Paths (SRP)</strong>, organizing learning around questions and answers. It facilitates interaction between students and between students and teachers, allowing real-time collaboration and centralized monitoring of academic progress.</p><p><strong>User: </strong>usuario@demo.com <strong>Password: </strong>password</p>",
-                "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "PostgreSQL", "Drizzle ORM", "Auth.js", "Redis", "Python", "Microservice"],
-                "live": "https://reis-app.inaqui.me",
+                "description": "<p><strong>Classroom-type</strong> web platform designed to support teaching through <strong>Study and Research Paths (SRP)</strong>, organizing learning around questions and answers.  Allows real-time collaboration, tracking of academic progress, and automatic analysis of educational data using <strong>AI</strong> techniques.</p><p><strong>User: </strong>usuario@demo.com <strong>Password: </strong>password</p>",
+                "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "SQLite", "Redis", "Python", "Sentece Transformers", "Docker"],
+                "live": "https://rei.apps.inaqui.me",
                 "image": "reis-demo.png"
+            },
+            {
+                "name": "Personal Cloud Infrastructure",
+                "description": "<p>Setup and maintenance of a <strong>self-hosted cloud infrastructure</strong> on a VPS (DigitalOcean), used to deploy and monitor multiple personal apps with <strong>Coolify</strong>. Includes a <strong>private VPN (WireGuard)</strong> for secure device communication, a <strong>self-hosted S3 server (MinIO)</strong> with access control and expiring links, and advanced configuration of firewall, DNS, custom domains, reverse proxy, and SSL certificates.</p>",
+                "tags": ["Linux", "Digital Ocean", "Coolify", "MinIO", "WireGuard", "Docker", "Nginx", "DNS", "SSL", "DevOps"],
+                "image": "infra-demo.png"
             },
             {
                 "name": "Estim Store",

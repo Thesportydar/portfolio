@@ -2,15 +2,15 @@ export const welcomeTranslations = {
     "es": {
         "welcome": "Hola, soy",
         "name": "Iñaqui Paladino",
-        "role": "Estudiante de Ingeniería de Sistemas",
+        "role": "Ingeniero de Sistemas",
         "downloadCv": "Descargar CV",
-        "cvSrc": "/inaqui-paladino-cv.pdf"
+        "cvSrc": "https://cdn.apps.inaqui.me/portfolio/inaqui-paladino-cv.pdf"
     },
     "en": {
         "welcome": "Hi, I'm",
         "name": "Iñaqui Paladino",
-        "role": "Systems Engineering Student",
+        "role": "Systems Engineer",
         "downloadCv": "Download CV",
-        "cvSrc": "/inaqui-paladino-cv-en.pdf"
+        "cvSrc": "https://cdn.apps.inaqui.me/portfolio/inaqui-paladino-cv-en.pdf"
     }
 }
