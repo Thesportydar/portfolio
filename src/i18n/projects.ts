@@ -7,13 +7,13 @@ export const projectsTranslations = {
                 "description": "<p>Plataforma web tipo <strong>classroom</strong> diseñada para apoyar la enseñanza mediante <strong>Recorridos de Estudio e Investigacion(REIs)</strong>, organizando el aprendizaje en torno a preguntas y respuestas. Permite colaboración en tiempo real, seguimiento del progreso académico y análisis automático de datos educativos mediante técnicas de <strong>IA</strong>.</p><p><strong>Usuario: </strong>usuario@demo.com <strong>Contraseña: </strong>password</p>",
                 "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "SQLite", "Redis", "Python", "Sentece Transformers", "Docker"],
                 "live": "https://rei.apps.inaqui.me",
-                "image": "reis-demo.png"
+                "image": "reis-demo.webp"
             },
             {
                 "name": "Infraestructura personal en la nube",
                 "description": "<p>Configuración y mantenimiento de una <strong>infraestructura autoalojada en la nube</strong> sobre un VPS (DigitalOcean), utilizada para el despliegue y monitoreo de múltiples apps personales mediante <strong>Coolify</strong>. Incluye una <strong>VPN privada (WireGuard)</strong> para comunicación segura entre dispositivos, un <strong>servidor S3 self-hosted (MinIO)</strong> con control de accesos y expiración de enlaces, y configuración avanzada de firewall, DNS, dominios personalizados, proxy inverso y certificados SSL.</p>",
                 "tags": ["Linux", "Digital Ocean", "Coolify", "MinIO", "WireGuard", "Docker", "Nginx", "DNS", "SSL", "DevOps"],
-                "image": "infra-demo.png"
+                "image": "infra-demo.webp"
             },
             {
                 "name": "Estim Store",
@@ -21,7 +21,7 @@ export const projectsTranslations = {
                 "tags": ["AngularJS", "Node.js", "Express", "MongoDB", "Mongoose"],
                 "github": "https://www.github.com/thesportydar/estim/tree/dev",
                 "live": "https://estim.onrender.com",
-                "image": "estim-demo.png"
+                "image": "estim-demo.webp"
             },
             {
                 "name": "API REST",
@@ -29,7 +29,7 @@ export const projectsTranslations = {
                 "tags": ["Spring Boot", "Spring Security", "Spring Data JPA", "JJWT", "PostgreSQL", "Swagger"],
                 "github": "https://www.github.com/thesportydar/shopping-cart",
                 "live": "https://thesportydar.github.io/shopping-cart-api-docs",
-                "image": "api-rest-demo.png"
+                "image": "api-rest-demo.webp"
             },
             {
                 "name": "Acortador de URLs",
@@ -37,28 +37,28 @@ export const projectsTranslations = {
                 "tags": ["Spring Boot", "PostgreSQL", "Astro", "Preact", "TailwindCSS", "Redis"],
                 "github": "https://www.github.com/thesportydar/url-shortener-backend",
                 "live": "https://link.inaqui.me/",
-                "image": "shortener.png"
+                "image": "shortener.webp"
             },
             {
                 "name": "Compilador",
                 "description": "<p>Proyecto desarrollado como parte de la cursada de Diseño de Compiladores 1 2023. Consiste en un compilador de un lenguaje de programación propio. El compilador fue desarrollado en <strong>Java</strong> utilizando la herramienta <strong>YACC</strong>, y el codigo de salida es ensamblador para la arquitectura <strong>x86 (pentium 32 bits)</strong>.</p>",
                 "tags": ["Java", "YACC", "Assembly"],
                 "github": "https://www.github.com/thesportydar/compilador",
-                "image": "compiler-demo.png"
+                "image": "compiler-demo.webp"
             },
             {
                 "name": "Corrector Ortográfico",
                 "description": "<p>Este proyecto se creo en el marco del trabajo final del taller de programacion en Java. Consiste en la implementación de un <strong>corrector ortográfico en Java</strong>, que abarca diversas funcionalidades para el procesamiento de texto, la detección de errores y la sugerencia de correcciones. Implementa 4 tipos de correctores: Basado en Diccionario de correciones, basado en permutaciones adyacentes, y dos de <strong>Levenshtein</strong>, uno basado en map y otro en <strong>trie</strong>.</p>",
                 "tags": ["Java", "Trie", "Levenshtein", "Junit", "Benchmark", "JMH"],
                 "github": "https://www.github.com/thesportydar/spellchecker",
-                "image": "spellchecker.png"
+                "image": "spellchecker.webp"
             },
             {
                 "name": "MRI Anomaly Detector",
                 "description": "<p>Detector de tumores cerebrales en imagenes de resonancias mageneticas a partir de <strong>autoencoders</strong> usando <strong>aprendizaje no supervisado</strong>. Se utilizo una arquitectura sencialla para enfocarse en el entendimiento del proceso de detección de anomalias a partir de autoencoders. No se usaron bloques residuales ni técnicas de regularización como dropout o batch normalization.</p>",
                 "tags": ["Python", "TensorFlow", "Keras", "Colab"],
                 "live": "https://colab.research.google.com/drive/1m856pNYCyWsdoSDelg4UDoTKufmgVGNL?usp=sharing",
-                "image": "autoencoder.png"
+                "image": "autoencoder.webp"
             }
         ]
     },
@@ -70,13 +70,13 @@ export const projectsTranslations = {
                 "description": "<p><strong>Classroom-type</strong> web platform designed to support teaching through <strong>Study and Research Paths (SRP)</strong>, organizing learning around questions and answers.  Allows real-time collaboration, tracking of academic progress, and automatic analysis of educational data using <strong>AI</strong> techniques.</p><p><strong>User: </strong>usuario@demo.com <strong>Password: </strong>password</p>",
                 "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "SQLite", "Redis", "Python", "Sentece Transformers", "Docker"],
                 "live": "https://rei.apps.inaqui.me",
-                "image": "reis-demo.png"
+                "image": "reis-demo.webp"
             },
             {
                 "name": "Personal Cloud Infrastructure",
                 "description": "<p>Setup and maintenance of a <strong>self-hosted cloud infrastructure</strong> on a VPS (DigitalOcean), used to deploy and monitor multiple personal apps with <strong>Coolify</strong>. Includes a <strong>private VPN (WireGuard)</strong> for secure device communication, a <strong>self-hosted S3 server (MinIO)</strong> with access control and expiring links, and advanced configuration of firewall, DNS, custom domains, reverse proxy, and SSL certificates.</p>",
                 "tags": ["Linux", "Digital Ocean", "Coolify", "MinIO", "WireGuard", "Docker", "Nginx", "DNS", "SSL", "DevOps"],
-                "image": "infra-demo.png"
+                "image": "infra-demo.webp"
             },
             {
                 "name": "Estim Store",
@@ -84,7 +84,7 @@ export const projectsTranslations = {
                 "tags": ["AngularJS", "Node.js", "Express", "MongoDB", "Mongoose"],
                 "github": "https://www.github.com/thesportydar/estim/tree/dev",
                 "live": "https://estim.onrender.com",
-                "image": "estim-demo.png"
+                "image": "estim-demo.webp"
             },
             {
                 "name": "API REST",
@@ -92,7 +92,7 @@ export const projectsTranslations = {
                 "tags": ["Spring Boot", "Spring Security", "Spring Data JPA", "JJWT", "PostgreSQL", "Swagger"],
                 "github": "https://www.github.com/thesportydar/shopping-cart",
                 "live": "https://thesportydar.github.io/shopping-cart-api-docs",
-                "image": "api-rest-demo.png"
+                "image": "api-rest-demo.webp"
             },
             {
                 "name": "URL Shortener",
@@ -100,28 +100,28 @@ export const projectsTranslations = {
                 "tags": ["Spring Boot", "PostgreSQL", "Astro", "Preact", "TailwindCSS", "Redis"],
                 "github": "https://www.github.com/thesportydar/url-shortener-backend",
                 "live": "https://link.inaqui.me/",
-                "image": "shortener.png"
+                "image": "shortener.webp"
             },
             {
                 "name": "Compiler",
                 "description": "<p>Project developed as part of the Compiler Design 1 2023 course. It consists of a compiler for a custom programming language. The compiler was developed in <strong>Java</strong> using the <strong>YACC</strong> tool, and the output code is assembler for the <strong>x86 architecture (pentium 32 bits)</strong>.</p>",
                 "tags": ["Java", "YACC", "Assembly"],
                 "github": "https://www.github.com/thesportydar/compilador",
-                "image": "compiler-demo.png"
+                "image": "compiler-demo.webp"
             },
             {
                 "name": "Spell Checker",
                 "description": "<p>This project was created as part of the final work of the Java programming workshop. It consists of the implementation of a <strong>Java spell checker</strong>, which covers various functionalities for text processing, error detection and suggestions of corrections. Implements 4 types of correctors: Based on dictionary of corrections, based on adjacent permutations, and two of <strong>Levenshtein</strong>, one based on map and another on <strong>trie</strong>.</p>",
                 "tags": ["Java", "Trie", "Levenshtein", "Junit", "Benchmark", "JMH"],
                 "github": "https://www.github.com/thesportydar/spellchecker",
-                "image": "spellchecker.png"
+                "image": "spellchecker.webp"
             },
             {
                 "name": "MRI Anomaly Detector",
                 "description": "<p>Brain tumor detector in magnetic resonance images using <strong>autoencoders</strong> with <strong>unsupervised learning</strong>. A simple architecture was used to focus on understanding the anomaly detection process from autoencoders. No residual blocks or regularization techniques such as dropout or batch normalization were used.</p>",
                 "tags": ["Python", "TensorFlow", "Keras", "Colab"],
                 "live": "https://colab.research.google.com/drive/1m856pNYCyWsdoSDelg4UDoTKufmgVGNL?usp=sharing",
-                "image": "autoencoder.png"
+                "image": "autoencoder.webp"
             }
         ]
     }
