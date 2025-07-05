@@ -9,7 +9,7 @@ export const jobsTranslations = {
                 isRemote: false,
                 duration: "Abr. 2025 - Act.",
                 description: "Actualmente formo parte de un grupo de trabajo en ISISTAN donde participo en el desarrollo de soluciones orientadas al procesamiento de datos y a la automatización de procesos internos. Las tareas incluyen la recolección de grandes volúmenes de información provenientes de diversas fuentes (incluyendo motores de búsqueda y bases de datos relacionales), el análisis de datos mediante técnicas de inteligencia artificial y la construcción de herramientas backend para facilitar la toma de decisiones. También participo en la construcción de dashboards interactivos orientados a usuarios técnicos y no técnicos.",
-                technologies: ["Python", "Bash", "Apache Solr", "Docker", "MySQL", "PostgreSQL", "Gitlab"]
+                technologies: ["Python", "Bash", "Apache Solr", "Docker", "MySQL", "PostgreSQL", "Gitlab", "JavaScript"]
             },
             {
                 title: "Fullstack Developer",
@@ -26,7 +26,7 @@ export const jobsTranslations = {
                 location: "Tandil, Buenos Aires",
                 isRemote: false,
                 duration: "Mar. 2020 - May. 2025",
-                description: ["🪪 Título intermedio: Analista Programador Universitario", "🏅 Distinción: Recibido con honores académicos", "📊 Promedio general: 8.72"],
+                description: ["🪪 Título intermedio: Analista Programador Universitario", "🏅 Distinción: Recibido con honores académicos", "📊 Promedio general: 8.75"],
                 technologies: []
             },
             {
@@ -49,8 +49,8 @@ export const jobsTranslations = {
                 location: "Tandil, Buenos Aires",
                 isRemote: false,
                 duration: "Apr. 2025 - Act.",
-                description: "I’m currently part of a research and development team at ISISTAN, where I contribute to building solutions focused on data processing and process automation. My work involves collecting large volumes of information from various sources (including search engines and relational databases), analyzing the data using artificial intelligence techniques, and developing backend tools to support decision-making. I also help design and implement interactive dashboards aimed at both technical and non-technical users.",
-                technologies: ["Python", "Bash", "Apache Solr", "Docker", "MySQL", "PostgreSQL", "Gitlab"]
+                description: "I'm currently part of a research and development team at ISISTAN, where I contribute to building solutions focused on data processing and process automation. My work involves collecting large volumes of information from various sources (including search engines and relational databases), analyzing the data using artificial intelligence techniques, and developing backend tools to support decision-making. I also help design and implement interactive dashboards aimed at both technical and non-technical users.",
+                technologies: ["Python", "Bash", "Apache Solr", "Docker", "MySQL", "PostgreSQL", "Gitlab", "JavaScript"]
             },
             {
                 title: "Fullstack Developer",
@@ -67,7 +67,7 @@ export const jobsTranslations = {
                 location: "Tandil, Buenos Aires",
                 isRemote: false,
                 duration: "Mar. 2020 - May. 2025",
-                description: ["🪪 Intermediate degree: University Programmer Analyst", "🏅 Distinction: Graduated with academic honors", "📊 Overall average: 8.72"],
+                description: ["🪪 Intermediate degree: University Programmer Analyst", "🏅 Distinction: Graduated with academic honors", "📊 Overall average: 8.75"],
                 technologies: []
             },
             {
