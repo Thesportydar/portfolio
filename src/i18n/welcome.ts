@@ -4,7 +4,7 @@ export const welcomeTranslations = {
         "name": "Iñaqui Paladino",
         "role": "Ingeniero de Sistemas",
         "downloadCv": "Descargar CV",
-        "cvSrc": "https://cdn.apps.inaqui.me/portfolio/inaqui-paladino-cv.pdf"
+        "cvSrc": "https://cdn.apps.inaqui.me/portfolio/inaqui-paladino-cv-es.pdf"
     },
     "en": {
         "welcome": "Hi, I'm",
