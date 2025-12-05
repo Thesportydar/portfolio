@@ -1,25 +1,33 @@
 ---
-import Welcome from '@/components/Welcome.astro';
-import Layout from '@/layouts/Layout.astro';
-import About from '@/components/AboutMe.astro';
-import Skills from '@/components/Skills.astro';
-import MyProjects from '@/components/MyProjects.astro';
-import Experience from '@/components/Experience.astro';
+import Welcome from "@/components/Welcome.astro";
+import Layout from "@/layouts/Layout.astro";
+import About from "@/components/AboutMe.astro";
+import Skills from "@/components/Skills.astro";
+import MyProjects from "@/components/MyProjects.astro";
+import Experience from "@/components/Experience.astro";
 
 const { lang } = Astro.params;
 
 export function getStaticPaths() {
-    return [
-        { params: { lang: 'en' } },
-        { params: { lang: 'es' } },
-    ]
+    return [{ params: { lang: "en" } }, { params: { lang: "es" } }];
 }
-
 ---
 
 <script src="@/scripts/local.js"></script>
 <Layout lang={lang}>
-    <section class="bg-black justify-center flex flex-col" style="height: calc(100vh - 3.5rem);">
+    <section
+        class="bg-black relative justify-center flex flex-col"
+        style="height: calc(100vh - 3.5rem);"
+    >
+        <div
+            class="absolute inset-0 opacity-20 pointer-events-none"
+            style="background-image: linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px);
+            background-size: 50px 50px;
+            mask-image: radial-gradient(ellipse at center, black 60%, transparent 90%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 60%, transparent 90%);
+            opacity: 0.3;"
+        >
+        </div>
         <Welcome lang={lang} />
     </section>
 

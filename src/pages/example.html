@@ -1,0 +1,190 @@
+<html style="background-color: black;">
+<svg width="100%" height="100%" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" fill="none"
+  xmlns="http://www.w3.org/2000/svg" id="complex-network-hero">
+  <defs>
+    <linearGradient id="cyber-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <linearGradient id="stream-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0" />
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="1" />
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="1" />
+    </linearGradient>
+
+    <filter id="neon-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+      <feMerge>
+        <feMergeNode in="coloredBlur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <symbol id="hex-node" viewBox="0 0 100 100">
+      <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="#0f172a" stroke="#64748b" stroke-width="2" />
+      <circle cx="50" cy="50" r="15" fill="#0f172a" stroke="#06b6d4" stroke-width="2" />
+    </symbol>
+
+
+  </defs>
+
+  <g>
+    <!-- Top Section -->
+    <path d="M100 100 L300 100 L350 150 L450 150" class="circuit-path" />
+    <path d="M700 100 L500 100 L450 150" class="circuit-path" />
+
+    <!-- Middle Section -->
+    <path d="M450 150 L450 350" class="circuit-path" />
+    <path d="M350 150 L350 350" class="circuit-path" />
+    <!-- Core Connector -->
+    <path d="M350 350 L450 350" class="circuit-path" />
+
+    <path d="M350 350 L250 450 L250 650" class="circuit-path" />
+    <path d="M450 350 L550 450 L550 650" class="circuit-path" />
+
+    <!-- Bottom Section -->
+    <!-- Redrawn to meet at center -->
+    <path d="M250 650 L325 750 L475 750 L550 650" class="circuit-path" />
+
+    <!-- Side Sections -->
+    <!-- Left Flank -->
+    <path d="M100 100 L100 650" class="circuit-path" />
+    <path d="M100 400 L200 400 L250 450" class="circuit-path" />
+    <path d="M100 650 L100 650 L250 650" class="circuit-path" />
+
+    <!-- Right Flank -->
+    <path d="M700 100 L700 650" class="circuit-path" />
+    <path d="M700 400 L600 400 L550 450" class="circuit-path" />
+    <path d="M700 650 L700 650 L550 650" class="circuit-path" />
+
+
+    <!-- Active Streams -->
+
+    <!-- Top Left Stream -->
+    <path d="M100 400 L100 100 L300 100 L350 150 L450 150" class="active-stream" id="stream-1" />
+
+    <!-- Top Right Stream -->
+    <path d="M700 400 L700 100 L500 100 L450 150" class="active-stream" id="stream-2" />
+
+    <!-- Middle Bottom Streams -->
+    <path d="M400 350 L450 350 L550 450 L550 650" class="active-stream" id="stream-4" />
+    <path d="M400 350 L350 350 L250 450 L250 650" class="active-stream" id="stream-13" />
+
+    <!-- Bottom Stream -->
+    <path d="M250 650 L325 750 L475 750 L550 650" class="active-stream" id="stream-5" />
+
+    <!-- Middle Flank Streams -->
+    <path d="M100 400 L200 400 L250 450" class="active-stream" id="stream-8" style="animation-duration: 3s;" />
+    <path d="M700 400 L600 400 L550 450" class="active-stream" id="stream-9" style="animation-duration: 3s;" />
+
+    <!-- Bottom Flank Streams -->
+    <path d="M100 550 L100 650 L250 650" class="active-stream" id="stream-17" style="animation-duration: 3s;" />
+    <path d="M700 600 L700 650 L550 650" class="active-stream" id="stream-18" style="animation-duration: 3s;" />
+
+
+
+    <circle cx="400" cy="350" r="4" fill="#d946ef" opacity="0.6" />
+  </g>
+</svg>
+
+<style is:global>
+  /* SVG Styles */
+  .circuit-path {
+    stroke: #475569;
+    stroke-width: 2;
+    fill: none;
+  }
+
+  .active-stream {
+    stroke: url(#stream-grad);
+    stroke-width: 3;
+    stroke-linecap: round;
+    fill: none;
+    stroke-dasharray: 50, 200;
+    filter: url(#neon-glow);
+    opacity: 0.8;
+  }
+
+  /* Data flow animation (The Pipeline) */
+  @keyframes flow {
+    to {
+      stroke-dashoffset: -250;
+    }
+  }
+
+  /* Node pulsing animation (The Network Pulse) */
+  @keyframes pulseNode {
+
+    0%,
+    100% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 3px rgba(6, 182, 212, 0.4));
+    }
+
+    50% {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 7px rgba(217, 70, 239, 0.7));
+    }
+  }
+
+  /* ... */
+
+  .node-pulse {
+    /* 1. Define que la caja de referencia es el propio elemento, no el SVG entero */
+    transform-box: fill-box;
+
+    /* 2. Pon el pivote en el centro de esa caja */
+    transform-origin: center;
+
+    /* Tu animación existente */
+    animation: pulseNode 3s ease-in-out infinite;
+  }
+
+  /* Assign animations to specific SVG elements by ID */
+  /* Note: These IDs must exist in the DarkTechnoHero SVG */
+
+  /* Fast-flowing streams */
+  #stream-1,
+  #stream-5 {
+    animation: flow 1.5s linear infinite;
+  }
+
+  /* Slower streams */
+  #stream-2,
+  #stream-3,
+  #stream-12 {
+    animation: flow 3s linear infinite;
+  }
+
+  /* Reversed stream (can indicate upload or a different process) */
+  #stream-4,
+  #stream-13 {
+    animation: flow 4s linear infinite reverse;
+    stroke: #10b981;
+    /* Give one stream a different color for variety */
+  }
+
+  #stream-14 {
+    animation: flow 2s linear infinite;
+  }
+
+  /* New Side Streams */
+  #stream-6,
+  #stream-7 {
+    animation: flow 4s linear infinite;
+  }
+
+  #stream-8,
+  #stream-9,
+  #stream-10,
+  #stream-11,
+  #stream-15,
+  #stream-16,
+  #stream-17,
+  #stream-18 {
+    animation: flow 3s linear infinite;
+  }
+</style>
+
+</html>

@@ -21,7 +21,7 @@ export default defineConfig({
     },
 
     experimental: {
-        svg: true,
+        svgo: true,
     },
 
     site: "https://inaqui.me"
