@@ -1,180 +1,205 @@
 ---
-import { Image } from 'astro:assets';
-import cloudIcon from '/src/assets/cloud.svg';
-const allLogosObj = import.meta.glob('/src/assets/skills/*.svg');
-const logoPaths = Object.keys(allLogosObj).sort();
-const logos = logoPaths.map((path) => allLogosObj[path]);
+import DarkTechnoHero from '../assets/dark-techno-hero.svg?raw';
 
-// Distribuir 24 imágenes: 1 centro, 7 inner, 8 middle, 8 outer
-const innerLogos = logos.slice(0, 7);
-const middleLogos = logos.slice(7, 15);
-const outerLogos = logos.slice(15, 23);
+const allLogosObj = import.meta.glob<{ default: ImageMetadata }>([
+    '/src/assets/skills/*.svg',
+    '!/src/assets/skills/icon-*.svg',
+    '!/src/assets/skills/front-Astro.svg',
+    '!/src/assets/skills/back-Express.svg',
+    '!/src/assets/skills/front-htmx.svg',
+]);
+const logoPaths = Object.keys(allLogosObj);
+const shuffledPaths = logoPaths.sort(() => Math.random() - 0.5);
 
-// Utilidad para cargar el logo (import.meta.glob devuelve función async)
-async function getLogoSrc(logoImport: () => Promise<any>) {
-  const mod = await logoImport();
-  return mod.default;
+const tracks = [
+    // Top Left Loop
+    { id: 'track-1', d: 'M100 400 L100 100 L300 100 L350 150 L450 150' },
+    // Top Right Loop
+    { id: 'track-2', d: 'M700 400 L700 100 L500 100 L450 150' },
+    // Bottom Center Loop
+    { id: 'track-3', d: 'M250 650 L325 750 L475 750 L550 650' },
+    // Center Outward Right
+    { id: 'track-4', d: 'M400 350 L450 350 L550 450 L550 650' },
+    // Center Outward Left
+    { id: 'track-5', d: 'M400 350 L350 350 L250 450 L250 650' },
+    // Side Inward Left
+    { id: 'track-6', d: 'M100 400 L200 400 L250 450' },
+    // Side Inward Right
+    { id: 'track-7', d: 'M700 400 L600 400 L550 450' },
+    // Bottom Outward Left
+    { id: 'track-8', d: 'M100 550 L100 650 L250 650' },
+    // Bottom Outward Right
+    { id: 'track-9', d: 'M700 600 L700 650 L550 650' },
+    // Long Vertical Left
+    { id: 'track-10', d: 'M100 100 L100 650' },
+    // Long Vertical Right
+    { id: 'track-11', d: 'M700 100 L700 650' },
+];
+
+const MAX_ICONS = 15; // Limit number of icons to prevent clutter
+const activePaths = shuffledPaths.slice(0, MAX_ICONS);
+
+async function getLogoSrc(path: string) {
+    const mod = await allLogosObj[path]();
+    return mod.default;
 }
 ---
-<div class="relative size-[20rem;] xl:size-[30rem;] xxl:size-[34rem;] xl:scale-125 xxl:scale-150">
-  {/* Central core */}
-  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/50 animate-pulse-glow">
-    <Image src={cloudIcon} alt="Cloud" class="w-12 h-12" />
-  </div>
 
-  {/* Orbit Ring 1 - Inner (7 logos) */}
-  <div class="absolute top-1/2 left-1/2 w-44 h-44 -translate-x-1/2 -translate-y-1/2 border border-[#c7a8ff]/70 rounded-full animate-spin-slow">
-    {await Promise.all(innerLogos.map(async (logoImport, i) => {
-      const angle = (360 / innerLogos.length) * i;
-      const src = await getLogoSrc(logoImport);
-      return (
-        <div style={{
-          position: 'absolute',
-          left: `calc(50% + 80px * cos(${angle}deg) - 12px)`,
-          top: `calc(50% + 80px * sin(${angle}deg) - 12px)`
-        }} class="w-6 h-6 rounded-full flex items-center justify-center bg-cyan-300/30 shadow animate-counter-spin-slow">
-          <Image src={src} alt={`Tech logo inner ${i+1}`} class="w-5 h-5" />
-        </div>
-      );
-    }))}
-  </div>
+<div class="relative w-full h-full flex items-center justify-center">
+    <div class="relative h-full aspect-square max-w-4xl">
+        <!-- Layer 1: Raw SVG background -->
+        <div
+            class="absolute inset-0 z-0 opacity-60 [&>svg]:w-full [&>svg]:h-full [&>svg]:stroke-cyan-500/50"
+            set:html={DarkTechnoHero}
+        />
 
-  {/* Orbit Ring 2 - Middle (8 logos) */}
-  <div class="absolute top-1/2 left-1/2 w-64 h-64 -translate-x-1/2 -translate-y-1/2 border border-[#c7a8ff]/70 rounded-full animate-spin-reverse">
-    {await Promise.all(middleLogos.map(async (logoImport, i) => {
-      const angle = (360 / middleLogos.length) * i;
-      const src = await getLogoSrc(logoImport);
-      return (
-        <div style={{
-          position: 'absolute',
-          left: `calc(50% + 120px * cos(${angle}deg) - 16px)`,
-          top: `calc(50% + 120px * sin(${angle}deg) - 16px)`
-        }} class="w-8 h-8 rounded-full flex items-center justify-center bg-cyan-300/30 shadow animate-counter-spin-reverse">
-          <Image src={src} alt={`Tech logo middle ${i+1}`} class="w-6 h-6" />
-        </div>
-      );
-    }))}
-  </div>
+        <!-- Layer 2: Moving Skill Icons (SVG Overlay) -->
+        <svg
+            class="absolute inset-0 z-10 w-full h-full pointer-events-none"
+            viewBox="0 0 800 800"
+            preserveAspectRatio="xMidYMid slice"
+        >
+            <defs>
+                {tracks.map((track) => <path id={track.id} d={track.d} fill="none" />)}
+            </defs>
 
-  {/* Orbit Ring 3 - Outer (8 logos) */}
-  <div class="absolute top-1/2 left-1/2 w-80 h-80 -translate-x-1/2 -translate-y-1/2 border border-[#c7a8ff]/70 rounded-full animate-spin-slower hidden xl:block">
-    {await Promise.all(outerLogos.map(async (logoImport, i) => {
-      const angle = (360 / outerLogos.length) * i;
-      const src = await getLogoSrc(logoImport);
-      return (
-        <div style={{
-          position: 'absolute',
-          left: `calc(50% + 160px * cos(${angle}deg) - 16px)`,
-          top: `calc(50% + 160px * sin(${angle}deg) - 16px)`
-        }} class="w-8 h-8 rounded-full flex items-center justify-center bg-cyan-300/30 shadow animate-counter-spin-slower">
-          <Image src={src} alt={`Tech logo outer ${i+1}`} class="w-6 h-6" />
-        </div>
-      );
-    }))}
-  </div>
+            {
+                activePaths.map(async (logoPath, index) => {
+                    const src = await getLogoSrc(logoPath);
+                    const trackIndex = index % tracks.length;
+                    const track = tracks[trackIndex];
 
-  {/* Connecting lines/particles */}
-  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
-  <div
-    class="absolute top-1/3 left-2/3 w-1 h-1 bg-cyan-400 rounded-full animate-ping"
-    style={{ animationDelay: "1s" }}
-  ></div>
-  <div
-    class="absolute bottom-1/3 right-1/3 w-1 h-1 bg-purple-400 rounded-full animate-ping"
-    style={{ animationDelay: "2s" }}
-  ></div>
+                    // Slower movement: duration between 25s and 45s
+                    const duration = 10 + Math.random() * 10;
+
+                    // Greater separation: start time offset up to -40s to spread them out
+                    const beginTime = -(Math.random() * 40);
+
+                    return (
+                        <g>
+                            {/* Glow effect behind the icon */}
+                            <circle r="25" fill="rgba(6, 182, 212, 0.1)" filter="blur(2px)">
+                                <animateMotion
+                                    dur={`${duration}s`}
+                                    repeatCount="indefinite"
+                                    rotate="auto"
+                                    begin={`${beginTime}s`}
+                                >
+                                    <mpath href={`#${track.id}`} />
+                                </animateMotion>
+                            </circle>
+
+                            {/* The Icon */}
+                            <image href={src.src} width="40" height="40" x="-20" y="-20" class="opacity-90">
+                                <animateMotion
+                                    dur={`${duration}s`}
+                                    repeatCount="indefinite"
+                                    rotate="0"
+                                    begin={`${beginTime}s`}
+                                    keyPoints="0;1"
+                                    keyTimes="0;1"
+                                    calcMode="linear"
+                                >
+                                    <mpath href={`#${track.id}`} />
+                                </animateMotion>
+                            </image>
+                        </g>
+                    );
+                })
+            }
+        </svg>
+    </div>
 </div>
 
-<style >
-  @keyframes spin-slow {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
-  }
-  
-  @keyframes spin-reverse {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(-360deg); }
-  }
-  
-  @keyframes spin-slower {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
-  }
-  
-  @keyframes counter-spin-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(-360deg); }
-  }
-  
-  @keyframes counter-spin-reverse {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  
-  @keyframes counter-spin-slower {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(-360deg); }
-  }
-  
-  @keyframes pulse-slow {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.05); }
-  }
-  
-  @keyframes pulse-delayed {
-    0%, 100% { opacity: 0.2; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(1.1); }
-  }
-  
-  @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-    50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(6, 182, 212, 0.3); }
-  }
-  
-  @keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
-  .animate-spin-slow {
-    animation: spin-slow 20s linear infinite;
-  }
-  
-  .animate-spin-reverse {
-    animation: spin-reverse 30s linear infinite;
-  }
-  
-  .animate-spin-slower {
-    animation: spin-slower 40s linear infinite;
-  }
-  
-  .animate-counter-spin-slow {
-    animation: counter-spin-slow 20s linear infinite;
-  }
-  
-  .animate-counter-spin-reverse {
-    animation: counter-spin-reverse 30s linear infinite;
-  }
-  
-  .animate-counter-spin-slower {
-    animation: counter-spin-slower 40s linear infinite;
-  }
-  
-  .animate-pulse-slow {
-    animation: pulse-slow 4s ease-in-out infinite;
-  }
-  
-  .animate-pulse-delayed {
-    animation: pulse-delayed 5s ease-in-out infinite 1s;
-  }
-  
-  .animate-pulse-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
-  }
-  
-  .animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient 3s ease infinite;
-  }
+<style>
+    /* Additional animations if needed */
+    .animate-pulse-slow {
+        animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+</style>
+
+<style is:global>
+    /* SVG Styles */
+    .circuit-path {
+        stroke: #475569;
+        stroke-width: 2;
+        fill: none;
+    }
+
+    .active-stream {
+        stroke: url(#stream-grad);
+        stroke-width: 3;
+        stroke-linecap: round;
+        fill: none;
+        stroke-dasharray: 50, 200;
+        filter: url(#neon-glow);
+        opacity: 0.8;
+    }
+
+    /* Data flow animation (The Pipeline) */
+    @keyframes flow {
+        to {
+            stroke-dashoffset: -250;
+        }
+    }
+
+    /* Node pulsing animation (The Network Pulse) */
+    @keyframes pulseNode {
+        0%,
+        100% {
+            transform: scale(1);
+            filter: drop-shadow(0 0 3px rgba(6, 182, 212, 0.4));
+        }
+        50% {
+            transform: scale(1.15);
+            filter: drop-shadow(0 0 7px rgba(217, 70, 239, 0.7));
+        }
+    }
+
+    .node-pulse {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: pulseNode 3s ease-in-out infinite;
+    }
+
+    /* Fast-flowing streams */
+    #stream-1,
+    #stream-5 {
+        animation: flow 1.5s linear infinite;
+    }
+
+    /* Slower streams */
+    #stream-2,
+    #stream-3,
+    #stream-12 {
+        animation: flow 3s linear infinite;
+    }
+
+    /* Reversed stream (can indicate upload or a different process) */
+    #stream-4,
+    #stream-13 {
+        animation: flow 3s linear infinite reverse;
+        stroke: #10b981; /* Give one stream a different color for variety */
+    }
+
+    #stream-14 {
+        animation: flow 2s linear infinite;
+    }
+
+    /* New Side Streams */
+    #stream-6,
+    #stream-7 {
+        animation: flow 4s linear infinite;
+    }
+
+    #stream-8,
+    #stream-9,
+    #stream-10,
+    #stream-11,
+    #stream-15,
+    #stream-16,
+    #stream-17,
+    #stream-18 {
+        animation: flow 3s linear infinite;
+    }
 </style>
