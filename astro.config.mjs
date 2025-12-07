@@ -24,5 +24,5 @@ export default defineConfig({
         svgo: true,
     },
 
-    site: "https://inaqui.me"
+    site: "https://inaquipaladino.com"
 });
