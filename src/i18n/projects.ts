@@ -6,7 +6,7 @@ export const projectsTranslations = {
               "name": "Fintwit Argy Bot",
               "description": "<p>Sistema automatizado que genera <strong>reportes financieros</strong> diarios e intra-diarios sobre el mercado argentino, a partir del análisis de posts en <strong>X (ex Twitter)</strong>. Utiliza <strong>IA generativa</strong> para resumir y contextualizar los tweets más relevantes, combinando scraping, filtrado y redacción automática. Los reportes se almacenan como archivos Markdown y se publican en un sitio web estático tipo <strong>CMS Git-based</strong>, con CI/CD desde GitHub. El scraper corre como un microservicio independiente, mientras que el flujo general está orquestado por <strong>N8N</strong>, incluye control de feriados y horarios del mercado, y es 100% automatizado.</p>",
               "tags": ["N8N", "Playwright", "Python", "CI/CD", "Docker", "Openai", "Astro"],
-              "live": ["https://fintwit.com.ar", "https://cdn.apps.inaqui.me/portfolio/n8n-demo.png"],
+              "live": ["https://fintwit.com.ar", "/public/n8n-demo.png"],
               "image": "fintwit-argy-demo.webp"
             },
             {
@@ -76,7 +76,7 @@ export const projectsTranslations = {
                 "name": "Fintwit Argy Bot",
                 "description": "<p>Automated system that generates daily and intra-day <strong>financial reports</strong> on the Argentine market, by analyzing posts on <strong>X (formerly Twitter)</strong>. It uses <strong>generative AI</strong> to summarize and contextualize the most relevant tweets, combining scraping, filtering, and automated writing. Reports are stored as Markdown files and published on a static <strong>Git-based CMS</strong> with CI/CD via GitHub. The scraper runs as an independent microservice, while the entire flow is orchestrated by <strong>N8N</strong>, with built-in holiday and market schedule checks. The system is fully automated.</p>",
                 "tags": ["N8N", "Playwright", "Python", "CI/CD", "Docker", "Openai", "Astro"],
-                "live": ["https://fintwit.com.ar", "https://cdn.apps.inaqui.me/portfolio/n8n-demo.png"],
+                "live": ["https://fintwit.com.ar", "/public/n8n-demo.png"],
                 "image": "fintwit-argy-demo.webp"
             },
             {
