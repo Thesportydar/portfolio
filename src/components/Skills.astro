@@ -1,18 +1,18 @@
 ---
 import SectionLayout from '@/layouts/SectionLayout.astro';
-import {skillsTranslations} from '@/i18n/skills.ts';
+import { skillsTranslations } from '@/i18n/skills.ts';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import SkillCategory from './SkillCategory.astro';
-
 
 const lang = getLangFromUrl(Astro.url);
 const uiT = useTranslations(lang);
 const t = skillsTranslations[lang];
 ---
+
 <SectionLayout id={uiT('nav.technologies').href} title={t.title}>
     <div class="grid lg:grid-cols-3 gap-4">
-        <SkillCategory title={"Frontend"} description={"Frontend description"} imgPrefix="front" />
-        <SkillCategory title={"Backend"} description={"Backend description"} imgPrefix="back" />
-        <SkillCategory title={"Tools & Systems"} description={"Tools description"} imgPrefix="tool" />
+        <SkillCategory title={'Cloud & DevOps'} description={'Cloud & DevOps description'} imgPrefix="ops" />
+        <SkillCategory title={'Backend'} description={'Backend description'} imgPrefix="back" />
+        <SkillCategory title={'Frontend'} description={'Frontend description'} imgPrefix="front" />
     </div>
 </SectionLayout>

@@ -14,28 +14,34 @@ const { title, description, imgPrefix } = Astro.props;
 const allImages = import.meta.glob<{ default: ImageMetadata }>(`/src/assets/skills/*.svg`);
 
 //filter by imgPrefix
-const images = Object.keys(allImages).filter((path) => path.includes(imgPrefix+'-'))
-    .reduce<{ [key: string]: () => Promise<{default:ImageMetadata}> }>((acc, key) => {
+//filter by imgPrefix
+const images = Object.keys(allImages)
+    .filter((path) => path.includes(imgPrefix + '-'))
+    .sort()
+    .reduce<{ [key: string]: () => Promise<{ default: ImageMetadata }> }>((acc, key) => {
         acc[key] = allImages[key];
         return acc;
     }, {});
 
-const iconKey = Object.keys(allImages).find((path) => path.includes('icon-'+imgPrefix));
+const iconKey = Object.keys(allImages).find((path) => path.includes('icon-' + imgPrefix));
 const icon = allImages[iconKey];
 ---
+
 <div class="p-4 border border-gray-200 rounded-lg shadow-md">
     <div class="flex items-center gap-4 mb-4 justify-center">
         <Image src={icon()} alt={title} class="size-7 md:size-8" />
         <h3 class="text-xl md:text-2xl font-bold">{title}</h3>
     </div>
     <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-3 gap-4">
-        {Object.entries(images).map(([path, image]) => {
-            const img = image();
-            const text = path.replace(`/src/assets/skills/${imgPrefix}-`, '').replace('.svg', '');
+        {
+            Object.entries(images).map(([path, image]) => {
+                const img = image();
+                let text = path.replace(`/src/assets/skills/${imgPrefix}-`, '').replace('.svg', '');
+                // remove number prefix
+                text = text.replace(/^\d+[-_.]*/, '');
 
-            return (
-                <Skill imgMeta={img} text={text} />
-            )
-        })}
+                return <Skill imgMeta={img} text={text} />;
+            })
+        }
     </div>
 </div>
