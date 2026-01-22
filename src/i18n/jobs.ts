@@ -3,7 +3,7 @@ export const jobsTranslations = {
         title: "Experiencia",
         jobs: [
             {
-                title: "Data & Backend Developer",
+                title: "Data & Backend Engineer",
                 company: "ISISTAN - CONICET-UNICEN",
                 location: "Tandil, Buenos Aires",
                 isRemote: false,
@@ -44,7 +44,7 @@ export const jobsTranslations = {
         title: "Experience",
         jobs: [
             {
-                title: "Data & Backend Developer",
+                title: "Data & Backend Engineer",
                 company: "ISISTAN - CONICET-UNICEN",
                 location: "Tandil, Buenos Aires",
                 isRemote: false,
