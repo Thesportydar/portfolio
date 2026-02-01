@@ -3,18 +3,19 @@ export const projectsTranslations = {
         "title": "Proyectos",
         "projects": [
             {
+                "name": "Fintwit Argy Bot",
+                "description": "<p>Analista financiero virtual sobre arquitectura <strong>Serverless en AWS.</strong> Monitorea y analiza el mercado en X (ex Twitter) mediante un flujo totalmente desacoplado y <strong>orientado a eventos</strong>. La infraestructura está definida íntegramente con <strong>Terraform (IaC)</strong>. La orquestación corre por cuenta de <strong>EventBridge</strong>, que dispara tareas efímeras en <strong>ECS Fargate Spot</strong> para la extracción robusta de datos (manejo de sesiones reales y evasión de bloqueos), seguido de un procesamiento asíncrono en <strong>Lambda</strong> que utiliza <strong>IA Generativa</strong> para la redacción de informes contextuales. El frontend opera bajo un modelo <strong>Git-based CMS</strong>: cada reporte dispara un pipeline de <strong>GitHub Actions</strong> que despliega el sitio estático globalmente vía <strong>CloudFront</strong>.</p>",
+                "tags": ["Terraform", "AWS", "Fargate Spot", "Lambda", "EventBridge", "OpenAI", "S3", "CloudFront", "GitHub Actions", "Astro"],
+                "live": "https://fintwit.com.ar",
+                "github": "https://github.com/thesportydar/twitter-scraper",
+                "image": "fintwit-argy-demo.webp"
+            },
+            {
                 "name": "wire-for-buckets",
                 "description": "<p><strong>Solución serverless para transferencia efímera y segura de archivos sobre AWS.</strong> Incluye un CLI para generar enlaces temporales de carga y descarga con el uso de <strong>S3 Pre-Signed URLs</strong>, encapsulados en interfaces HTML desechables, sin backend persistente. La infraestructura está definida íntegramente con <strong>Terraform (IaC)</strong>, utilizando estado remoto y ejecución mediante IAM AssumeRole en un entorno <strong>multi-account</strong>, donde la <strong>Hosted Zone de Route53</strong>, el backend de Terraform y la <strong>validación de certificados ACM</strong> residen en la cuenta de management (<strong>AWS Organization</strong>). La seguridad perimetral se garantiza mediante <strong>CloudFront</strong> con <strong>Origin Access Control (OAC)</strong>, manteniendo los buckets estrictamente privados con terminación TLS/SSL.</p>",
                 "tags": ["Terraform", "AWS", "S3", "CloudFront", "IAM", "Route53", "ACM"],
                 "github": "https://github.com/thesportydar/wire-for-buckets",
                 "image": "wire-for-buckets.webp"
-            },
-            {
-                "name": "Fintwit Argy Bot",
-                "description": "<p>Sistema automatizado que genera <strong>reportes financieros</strong> diarios e intra-diarios sobre el mercado argentino, a partir del análisis de posts en <strong>X (ex Twitter)</strong>. Utiliza <strong>IA generativa</strong> para resumir y contextualizar los tweets más relevantes, combinando scraping, filtrado y redacción automática. Los reportes se almacenan como archivos Markdown y se publican en un sitio web estático tipo <strong>CMS Git-based</strong>, con CI/CD desde GitHub. El scraper corre como un microservicio independiente, mientras que el flujo general está orquestado por <strong>N8N</strong>, incluye control de feriados y horarios del mercado, y es 100% automatizado.</p>",
-                "tags": ["N8N", "Playwright", "Python", "CI/CD", "Docker", "Openai", "Astro"],
-                "live": ["https://fintwit.com.ar", "/public/n8n-demo.png"],
-                "image": "fintwit-argy-demo.webp"
             },
             {
                 "name": "REIS",
@@ -42,18 +43,19 @@ export const projectsTranslations = {
         "title": "Projects",
         "projects": [
             {
+                "name": "Fintwit Argy Bot",
+                "description": "<p>Virtual financial analyst built on <strong>AWS Serverless architecture</strong>. It monitors and analyzes the market on X (formerly Twitter) via a fully decoupled, <strong>event-driven</strong> workflow. The infrastructure is defined entirely with <strong>Terraform (IaC)</strong>. Orchestration is managed by <strong>EventBridge</strong>, which triggers ephemeral tasks on <strong>ECS Fargate Spot</strong> for robust data extraction (handling real sessions and evasion techniques), followed by asynchronous processing on <strong>Lambda</strong> utilizing <strong>Generative AI</strong> for contextual report generation. The frontend operates on a <strong>Git-based CMS</strong> model: every report triggers a <strong>GitHub Actions</strong> pipeline that deploys the static site globally via <strong>CloudFront</strong>.</p>",
+                "tags": ["Terraform", "AWS", "Fargate Spot", "Lambda", "EventBridge", "OpenAI", "S3", "CloudFront", "GitHub Actions", "Astro"],
+                "live": "https://fintwit.com.ar",
+                "github": "https://github.com/thesportydar/twitter-scraper",
+                "image": "fintwit-argy-demo.webp"
+            },
+            {
                 "name": "wire-for-buckets",
                 "description": "<p><strong>Serverless solution for ephemeral and secure file transfer on AWS.</strong> It includes a CLI to generate temporary upload and download links using <strong>S3 Pre-Signed URLs</strong>, wrapped in disposable HTML interfaces, with no persistent backend. The infrastructure is fully defined using <strong>Terraform (IaC)</strong>, leveraging remote state and execution via IAM AssumeRole in a <strong>multi-account</strong> environment, where the <strong>Route53 Hosted Zone</strong>, the Terraform backend, and <strong>ACM certificate validation</strong> reside in the management account (<strong>AWS Organization</strong>). Perimeter security is ensured through <strong>CloudFront</strong> with <strong>Origin Access Control (OAC)</strong>, keeping the buckets strictly private with TLS/SSL termination.</p>",
                 "tags": ["Terraform", "AWS", "S3", "CloudFront", "IAM", "Route53", "ACM"],
                 "github": "https://github.com/thesportydar/wire-for-buckets",
                 "image": "wire-for-buckets.webp"
-            },
-            {
-                "name": "Fintwit Argy Bot",
-                "description": "<p>Automated system that generates daily and intra-day <strong>financial reports</strong> on the Argentine market, by analyzing posts on <strong>X (formerly Twitter)</strong>. It uses <strong>generative AI</strong> to summarize and contextualize the most relevant tweets, combining scraping, filtering, and automated writing. Reports are stored as Markdown files and published on a static <strong>Git-based CMS</strong> with CI/CD via GitHub. The scraper runs as an independent microservice, while the entire flow is orchestrated by <strong>N8N</strong>, with built-in holiday and market schedule checks. The system is fully automated.</p>",
-                "tags": ["N8N", "Playwright", "Python", "CI/CD", "Docker", "Openai", "Astro"],
-                "live": ["https://fintwit.com.ar", "/public/n8n-demo.png"],
-                "image": "fintwit-argy-demo.webp"
             },
             {
                 "name": "REIS",
