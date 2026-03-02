@@ -1,0 +1,53 @@
+---
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import { getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+
+const meta = {
+    "es": {
+        description: "¡Hola! Soy Iñaqui Paladino, Ingeniero de Sistemas y desarrollador de software de Tandil, Argentina. Me apasiona construir soluciones web, diseñar arquitecturas eficientes y trabajar con datos. ¡Bienvenido a mi portfolio!",
+    },
+    "en": {
+        description: "Hi! I'm Iñaqui Paladino, Systems Engineer and software developer from Tandil, Argentina. I am passionate about building web solutions, designing efficient architectures, and working with data. Welcome to my portfolio!",
+    }
+}
+
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/ip-logo.svg" />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <link rel="canonical" href=`https://inaquipaladino.com/${lang}`>
+        <link rel="alternate" hreflang="es" href="https://inaquipaladino.com/es">
+        <link rel="alternate" hreflang="en" href="https://inaquipaladino.com/en">
+        <meta name="generator" content={Astro.generator} />
+        <title>Iñaqui Paladino</title>
+        <meta name="keywords" content="Iñaqui Paladino Bravo, Portfolio, Desarrollador, Ingeniero de Sistemas, Tandil, Argentina" />
+        <meta name="description" content={meta[lang].description} />
+        <meta name="author" content="Iñaqui Paladino" />
+    </head>
+    <body class="w-full bg-black">
+
+        <Header />
+
+        <slot />
+        <Footer />
+    </body>
+
+    <style is:global>
+        :root {
+            --font-family: Inter, Roboto, ibm-plex-sans, system-ui, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            --scroll-position: 0;
+        }
+    </style>
+</html>

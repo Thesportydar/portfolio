@@ -1,0 +1,25 @@
+---
+import SectionLayout from "@/layouts/SectionLayout.astro";
+import Job from "./Job.astro";
+import {jobsTranslations} from '@/i18n/jobs.ts';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const uiT = useTranslations(lang);
+const t = jobsTranslations[lang];
+---
+<SectionLayout id={uiT('nav.experience').href} title={t.title}>
+    <div class="flex flex-col gap-8">
+    {t.jobs.map((job) => (
+        <Job
+            title={job.title}
+            company={job.company}
+            location={job.location}
+            isRemote={job.isRemote}
+            duration={job.duration}
+            description={job.description}
+            technologies={job.technologies}
+        />
+    ))}
+    </div>
+</SectionLayout>

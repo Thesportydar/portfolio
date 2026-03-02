@@ -1,0 +1,36 @@
+---
+import { languages } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/utils';
+import ChevronDown from '@/assets/chevron-down.svg';
+
+const currentLanguage = getLangFromUrl(Astro.url);
+---
+<div class="relative inline-block group">
+    <input
+        type="checkbox"
+        id="language-picker"
+        class="peer hidden"
+    />
+    <label
+        for="language-picker"
+        class="block cursor-pointer bg-inherit hover:underline underline-offset-8 decoration-2 decoration-gray-400 capitalize"
+    >
+        {currentLanguage}
+        <ChevronDown class="inline-block size-4 group-hover:translate-y-1 transform transition-all" />
+    </label>
+    <ul
+        class="absolute hidden peer-checked:block bg-white border border-gray-300 shadow-lg z-10"
+    >
+        {Object.entries(languages).map(([lang]) => (
+            <li>
+                <a
+                    href={`/${lang}/`}
+                    class="block p-2 text-black hover:bg-gray-200 capitalize"
+                    onclick="document.getElementById('language-picker').checked = false;"
+                >
+                    {lang}
+                </a>
+            </li>
+        ))}
+    </ul>
+</div>

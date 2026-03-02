@@ -1,0 +1,17 @@
+---
+import SectionLayout from "@/layouts/SectionLayout.astro";
+import Profile from "@/assets/profile.webp";
+import {aboutMeTranslations} from '@/i18n/aboutMe.ts';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const uiT = useTranslations(lang);
+const t = aboutMeTranslations[lang];
+---
+
+<SectionLayout title={t.title} id={uiT('nav.about').href}>
+    <img src={Profile.src} alt="Iñaqui Paladino Perfil" class="rounded-full size-44 md:size-56 mx-auto mb-8" />
+
+    <div class="space-y-2 text-base md:text-lg text-justify" aria-label="Acerca de Mí" set:html={t.text}></div>
+
+</SectionLayout>

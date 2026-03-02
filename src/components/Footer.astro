@@ -1,0 +1,26 @@
+---
+import GithubMark from '@/assets/github-mark.svg';
+import LinkedinMark from '@/assets/linkedin-mark.svg';
+import MailSvg from '@/assets/mail.svg';
+
+const year = new Date().getFullYear();
+---
+<footer class="w-full mt-12 py-6 bg-black/80 border-t border-gray-800 text-center text-gray-400 text-sm flex flex-col items-center gap-2">
+  <div>
+    © {year} Iñaqui Paladino Bravo
+  </div>
+  <div class="flex gap-4 justify-center">
+    <!--Github-->
+    <a class="hover:scale-95 rounded-full hover:shadow-lg hover:shadow-white/30" href="https://github.com/Thesportydar" target="_blank">
+        <GithubMark class="size-10 md:size-12" fill="white" />
+    </a>
+    <!--Linkedin-->
+    <a class="hover:scale-95 rounded-xl hover:shadow-lg hover:shadow-white/30" href="https://www.linkedin.com/in/ipaladino/" target="_blank">
+        <LinkedinMark class="size-10 md:size-12" fill="white" />
+    </a>
+    <!--Mailto-->
+    <a class="hover:scale-95 rounded-2xl hover:shadow-lg hover:shadow-white/30" href="mailto:ipaladinobravo@gmail.com" aria-label="Enviar un mail" target="_blank">
+        <MailSvg class="size-10 md:size-12" fill="white" />
+    </a>
+  </div>
+</footer>
