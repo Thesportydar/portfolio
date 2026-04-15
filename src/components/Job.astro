@@ -43,8 +43,13 @@ const { title, description, location, isRemote, company, duration, technologies 
         </div>
 
         {Array.isArray(description) ? (
-            <ul class="list-none pl-0 text-sm md:text-base text-gray-700 text-justify">
-                {description.map((item) => <li>{item}</li>)}
+            <ul class="flex flex-col gap-1.5">
+                {description.map((item) => (
+                    <li class="text-sm md:text-base text-gray-700 text-justify flex items-start">
+                        <span class="text-pink-600 mr-2 font-black shrink-0 mt-0.5">•</span>
+                        <span>{item}</span>
+                    </li>
+                ))}
             </ul>
         ) : (
             <p class="text-sm md:text-base text-gray-700 text-justify">{description}</p>
