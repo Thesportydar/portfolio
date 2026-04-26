@@ -18,6 +18,13 @@ export const projectsTranslations = {
                 "image": "wire-for-buckets.webp"
             },
             {
+                "name": "Route53 Dynamic DNS (AWS fork)",
+                "description": "<p><strong>Fork de la solución oficial de AWS Labs para Dynamic DNS serverless con Route53.</strong> Sobre la base original implementé mejoras orientadas a uso real con routers residenciales y dispositivos legacy: endpoint compatible con <strong>protocolo DynDNS</strong> (<code>/nic/update</code>), soporte de <strong>HTTP/HTTPS mediante CloudFront</strong>, autenticación por <strong>Basic Auth</strong> y <strong>tokens temporales</strong> para actualización desde navegador.</p>",
+                "tags": ["AWS", "Route53", "Lambda", "CloudFront", "DynamoDB", "CDK", "Python", "DynDNS"],
+                "github": "https://github.com/thesportydar/route53-dynamic-dns-with-lambda",
+                "image": "route53-dynamic-dns.webp"
+            },
+            {
                 "name": "REIS",
                 "description": "<p>Plataforma web tipo <strong>classroom</strong> diseñada para apoyar la enseñanza mediante <strong>Recorridos de Estudio e Investigacion (REIs)</strong>, organizando el aprendizaje en torno a preguntas y respuestas. Permite colaboración en tiempo real, seguimiento del progreso académico y análisis automático de datos educativos mediante técnicas de <strong>IA</strong>. Actualmente es utilizada por docentes y estudiantes en contextos reales de aula, y su desarrollo dio lugar a una publicación científica en el marco de una conferencia internacional de didáctica.</p><p><strong>Usuario: </strong>usuario@demo.com <strong>Contraseña: </strong>password</p>",
                 "tags": ["Astro.js", "Preact", "HTMx", "TypeScript", "Bun.sh", "SQLite", "Redis", "Python", "Sentece Transformers", "Docker"],
@@ -56,6 +63,13 @@ export const projectsTranslations = {
                 "tags": ["Terraform", "AWS", "S3", "CloudFront", "IAM", "Route53", "ACM"],
                 "github": "https://github.com/thesportydar/wire-for-buckets",
                 "image": "wire-for-buckets.webp"
+            },
+            {
+                "name": "Route53 Dynamic DNS (AWS fork)",
+                "description": "<p><strong>Fork of the official AWS Labs serverless Dynamic DNS solution for Route53.</strong> On top of the original baseline, I added production-oriented improvements for real routers and legacy devices: a <strong>DynDNS-compatible endpoint</strong> (<code>/nic/update</code>), <strong>HTTP/HTTPS support via CloudFront</strong>, <strong>Basic Auth</strong> and <strong>temporary token-based authentication</strong> for browser updates.</p>",
+                "tags": ["AWS", "Route53", "Lambda", "CloudFront", "DynamoDB", "CDK", "Python", "DynDNS"],
+                "github": "https://github.com/thesportydar/route53-dynamic-dns-with-lambda",
+                "image": "route53-dynamic-dns.webp"
             },
             {
                 "name": "REIS",

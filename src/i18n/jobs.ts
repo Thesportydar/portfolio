@@ -56,7 +56,7 @@ export const jobsTranslations = {
                 company: "Universidad Nacional del Centro de la Provincia de Buenos Aires (UNICEN)",
                 location: "Tandil, Buenos Aires",
                 isRemote: false,
-                duration: "Mar. 2020 - May. 2025",
+                duration: "Mar. 2020 - Jun. 2025",
                 description: ["🪪 Título intermedio: Analista Programador Universitario", "🏅 Distinción: Recibido con honores académicos", "📊 Promedio: 8.75"],
                 technologies: []
             },
@@ -137,7 +137,7 @@ export const jobsTranslations = {
                 company: "Universidad Nacional del Centro de la Provincia de Buenos Aires (UNICEN)",
                 location: "Tandil, Buenos Aires",
                 isRemote: false,
-                duration: "Mar. 2020 - May. 2025",
+                duration: "Mar. 2020 - Jun. 2025",
                 description: ["🪪 Intermediate degree: University Programmer Analyst", "🏅 Distinction: Graduated with academic honors", "📊 GPA: 8.75"],
                 technologies: []
             },
