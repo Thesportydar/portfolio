@@ -19,24 +19,16 @@ const t = welcomeTranslations[lang];
             {t.welcome}
         </h2>
 
-        <div class="motion-preset-slide-right py-1 md:py-4 motion-delay-[600ms] motion-duration-500 relative">
-            <span
-                aria-hidden="true"
-                class="invisible block uppercase bg-clip-text bg-gradient-to-br to-[#562b63] from-20% via-[#e082c9] via-60% from-[#f7d8e9] to-80% leading-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold"
-            >
-                {t.name}
-            </span>
-            <h1
-                class="absolute top-1 md:top-4 left-0 font-sans motion-preset-typewriter-[16] motion-loop-infinite motion-duration-[3s] motion-delay-[800ms] text-transparent uppercase bg-clip-text bg-gradient-to-br to-[#562b63] from-20% via-[#e082c9] via-60% from-[#f7d8e9] to-80% leading-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold"
-            >
-                {t.name}
-            </h1>
-        </div>
+        <h1
+            class="motion-preset-slide-right py-1 md:py-4 motion-delay-[600ms] motion-duration-500 font-sans text-transparent uppercase bg-clip-text bg-gradient-to-br to-[#562b63] from-20% via-[#e082c9] via-60% from-[#f7d8e9] to-80% leading-normal text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold"
+        >
+            {t.name}
+        </h1>
 
         <h2
             class="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 motion-preset-slide-right motion-delay-[1000ms] motion-duration-500"
         >
-            {t.role}
+            <span id="typed-role" data-roles={JSON.stringify(t.roles)}></span>
         </h2>
 
         <div class="flex gap-2">
@@ -84,3 +76,42 @@ const t = welcomeTranslations[lang];
         <Hero />
     </div>
 </div>
+
+<style>
+    /* Override typed.js cursor to match the site's white text */
+    .typed-cursor {
+        color: white;
+        font-weight: 300;
+        opacity: 1;
+        animation: typed-blink 0.7s infinite;
+    }
+    @keyframes typed-blink {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+</style>
+
+<script>
+    import Typed from 'typed.js';
+
+    const el = document.getElementById('typed-role');
+    if (el) {
+        const roles: string[] = JSON.parse(el.dataset.roles ?? '[]');
+        new Typed('#typed-role', {
+            strings: roles,
+            typeSpeed: 55,
+            backSpeed: 35,
+            backDelay: 1500,
+            startDelay: 1100,
+            loop: true,
+            smartBackspace: true,
+            showCursor: true,
+            cursorChar: '|',
+        });
+    }
+</script>
