@@ -29,7 +29,8 @@ export const jobsTranslations = {
                     "Implementé un pipeline de matching de dos etapas (bi-encoder + cross-encoder) para asignar revisores a perfiles de investigación respetando restricciones institucionales y maximizando afinidad semántica.",
                     "Optimicé el reranker cross-encoder reemplazando APIs de alto nivel por forward passes manuales con precisión mixta (FP16 + autocast), logrando ~9x de speedup al aprovechar Tensor Cores y habilitando el procesamiento paralelo multi-GPU.",
                     "Desarrollo de una PoC de buscador de investigadores para demandas industriales (Globant, Mercado Libre, Vaca Muerta): identifica en segundos a los expertos más relevantes para un problema técnico dado.",
-                    "Orquestación de ETL híbridos y concurrentes con detección de idioma en tiempo real, estrategias de caché, y gestión de infraestructura (MLOps) mediante Docker y CI/CD."
+                    "Diseño de pipelines ETL concurrentes para la unificación de repositorios legados heterogéneos (Data Fusion), desarrollando algoritmos de Entity Resolution y deduplicación determinística para consolidar millones de registros sin colisiones.",
+                    "Orquestación de infraestructura MLOps con detección de idioma en tiempo real, estrategias de caché, y despliegue de modelos y bases de datos mediante Docker y pipelines de CI/CD."
                 ],
                 technologies: ["Python", "Apache Solr", "PostgreSQL", "pgvector", "PyTorch", "Docker", "Bash", "Gitlab", "NLP", "Transformers"]
             },
@@ -113,7 +114,8 @@ export const jobsTranslations = {
                     "Developed applied AI algorithms for complex matching, expert search, and the formation of technical committees.",
                     "Orchestrated concurrent and hybrid ETL pipelines (Python, Solr, PostgreSQL/pgvector) featuring real-time language detection and caching strategies.",
                     "Architected a technological bridge to connect experts with innovation demands from leading industries (Vaca Muerta, Globant, Mercado Libre, Meta) through precise technical capability identification.",
-                    "Managed infrastructure and scalability (MLOps) via Docker, CI/CD pipelines, and the integration of search engines with relational databases."
+                    "Designed concurrent ETL pipelines to unify heterogeneous legacy repositories (Data Fusion), developing Entity Resolution and deterministic deduplication algorithms to consolidate millions of records without collisions.",
+                    "Orchestrated MLOps infrastructure with real-time language detection, caching strategies, and containerized deployment of models and databases using Docker and CI/CD pipelines."
                 ],
                 technologies: ["Python", "Apache Solr", "PostgreSQL", "pgvector", "PyTorch", "Docker", "Bash", "Gitlab", "NLP", "Transformers"]
             },
