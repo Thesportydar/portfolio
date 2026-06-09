@@ -63,9 +63,13 @@ export const jobsTranslations = {
                 company: "Amazon Web Services (AWS)",
                 location: "",
                 isRemote: true,
-                duration: "2026",
-                description: ["Preparación completa — examen pendiente"],
-                technologies: []
+                duration: "Jun. 2026 - Jun. 2029",
+                description: [
+                    "Certificación oficial de AWS que valida la capacidad para diseñar arquitecturas escalables, resilientes y costo-eficientes en la nube.",
+                    "📊 Puntaje: 915/1000",
+                    "🔗 <a href='https://www.credly.com/badges/4d791ba4-2cdc-47fe-910b-aedc3f348fd0/public_url' target='_blank' rel='noopener noreferrer' class='underline hover:text-pink-500'>Ver credencial en Credly</a>"
+                ],
+                technologies: ["Cloud Architecture", "AWS", "Serverless", "Security", "IaC"]
             },
             {
                 title: "Fundamentos de Ingeniería de Software",
@@ -143,9 +147,13 @@ export const jobsTranslations = {
                 company: "Amazon Web Services (AWS)",
                 location: "",
                 isRemote: true,
-                duration: "2026",
-                description: ["Preparation completed — exam pending"],
-                technologies: []
+                duration: "Jun. 2026 - Jun. 2029",
+                description: [
+                    "Official AWS certification validating the ability to design scalable, resilient, and cost-efficient cloud architectures.",
+                    "📊 Score: 915/1000",
+                    "🔗 <a href='https://www.credly.com/badges/4d791ba4-2cdc-47fe-910b-aedc3f348fd0/public_url' target='_blank' rel='noopener noreferrer' class='underline hover:text-pink-500'>View credential on Credly</a>"
+                ],
+                technologies: ["Cloud Architecture", "AWS", "Serverless", "Security", "IaC"]
             },
             {
                 title: "Fundamentals of Software Engineering",

@@ -3,6 +3,13 @@ export const projectsTranslations = {
         "title": "Proyectos",
         "projects": [
             {
+                "name": "FinTwit RAG: End-to-End Serverless AI Search",
+                "description": "<p>Pipeline de <strong>Retrieval-Augmented Generation (RAG)</strong> y motor de búsqueda para la comunidad de FinTwit Argentina. Orquestado con <strong>Terraform (IaC)</strong> y desplegado como una API <strong>Serverless en AWS (Lambda + API Gateway)</strong>. Utiliza <strong>Jina AI</strong> para embeddings y reranking de alta calidad, junto con <strong>OpenAI/Claude</strong> para la síntesis de respuestas. Cuenta con una base de datos vectorial <strong>Qdrant</strong> alojada en una arquitectura de cómputo efímero (EC2) desacoplada del almacenamiento persistente (EBS + SSM), optimizada fuertemente para minimizar costos operativos de la nube manteniendo la persistencia e indexación de los vectores intacta.</p>",
+                "tags": ["Python", "Terraform", "AWS", "Serverless", "Qdrant", "OpenAI", "Jina AI", "RAG"],
+                "github": "https://github.com/thesportydar/fintwit-rag",
+                "image": "fintwit-rag.webp"
+            },
+            {
                 "name": "Fintwit Argy Bot",
                 "description": "<p>Analista financiero virtual sobre arquitectura <strong>Serverless en AWS.</strong> Monitorea y analiza el mercado en X (ex Twitter) mediante un flujo totalmente desacoplado y <strong>orientado a eventos</strong>. La infraestructura está definida íntegramente con <strong>Terraform (IaC)</strong>. La orquestación corre por cuenta de <strong>EventBridge</strong>, que dispara tareas efímeras en <strong>ECS Fargate Spot</strong> para la extracción robusta de datos (manejo de sesiones reales y evasión de bloqueos), seguido de un procesamiento asíncrono en <strong>Lambda</strong> que utiliza <strong>Modelos de Lenguaje (LLMs)</strong> para la redacción de informes contextuales. El frontend opera bajo un modelo <strong>Git-based CMS</strong>: cada reporte dispara un pipeline de <strong>GitHub Actions</strong> que despliega el sitio estático globalmente vía <strong>CloudFront</strong>.</p>",
                 "tags": ["Terraform", "AWS", "Fargate Spot", "Lambda", "EventBridge", "LLMs", "OpenAI", "CloudFront", "GitHub Actions", "Astro"],
@@ -49,6 +56,13 @@ export const projectsTranslations = {
     "en": {
         "title": "Projects",
         "projects": [
+            {
+                "name": "FinTwit RAG: End-to-End Serverless AI Search",
+                "description": "<p>An end-to-end <strong>Retrieval-Augmented Generation (RAG)</strong> pipeline and search engine for the Argentine FinTwit community. Fully automated using <strong>Terraform (IaC)</strong> and deployed as a <strong>Serverless API on AWS (Lambda + API Gateway)</strong>. It leverages <strong>Jina AI</strong> for high-quality embeddings and reranking, alongside <strong>OpenAI/Claude</strong> for generating synthesized answers. Features a <strong>Qdrant</strong> vector database running on a cost-optimized, ephemeral compute layer (EC2) that is decoupled from persistent storage (EBS + SSM), ensuring data persistence while minimizing cloud operational costs.</p>",
+                "tags": ["Python", "Terraform", "AWS", "Serverless", "Qdrant", "OpenAI", "Jina AI", "RAG"],
+                "github": "https://github.com/thesportydar/fintwit-rag",
+                "image": "fintwit-rag.webp"
+            },
             {
                 "name": "Fintwit Argy Bot",
                 "description": "<p>Virtual financial analyst built on <strong>AWS Serverless architecture</strong>. It monitors and analyzes the market on X (formerly Twitter) via a fully decoupled, <strong>event-driven</strong> workflow. The infrastructure is defined entirely with <strong>Terraform (IaC)</strong>. Orchestration is managed by <strong>EventBridge</strong>, which triggers ephemeral tasks on <strong>ECS Fargate Spot</strong> for robust data extraction (handling real sessions and evasion techniques), followed by asynchronous processing on <strong>Lambda</strong> utilizing <strong>Large Language Models (LLMs)</strong> for contextual report generation. The frontend operates on a <strong>Git-based CMS</strong> model: every report triggers a <strong>GitHub Actions</strong> pipeline that deploys the static site globally via <strong>CloudFront</strong>.</p>",

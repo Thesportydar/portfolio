@@ -47,12 +47,12 @@ const { title, description, location, isRemote, company, duration, technologies 
                 {description.map((item) => (
                     <li class="text-sm md:text-base text-gray-700 text-justify flex items-start">
                         <span class="text-pink-600 mr-2 font-black shrink-0 mt-0.5">•</span>
-                        <span>{item}</span>
+                        <span set:html={item}></span>
                     </li>
                 ))}
             </ul>
         ) : (
-            <p class="text-sm md:text-base text-gray-700 text-justify">{description}</p>
+            <p class="text-sm md:text-base text-gray-700 text-justify" set:html={description}></p>
         )}
 
         <div class="flex flex-wrap gap-2 justify-center sm:justify-start">
