@@ -3,7 +3,7 @@ export const projectsTranslations = {
         "title": "Proyectos",
         "projects": [
             {
-                "name": "FinTwit RAG: End-to-End Serverless AI Search",
+                "name": "End-to-End Serverless AI Search",
                 "description": "<p>Pipeline de <strong>Retrieval-Augmented Generation (RAG)</strong> y motor de búsqueda para la comunidad de FinTwit Argentina. Orquestado con <strong>Terraform (IaC)</strong> y desplegado como una API <strong>Serverless en AWS (Lambda + API Gateway)</strong>. Utiliza <strong>Jina AI</strong> para embeddings y reranking de alta calidad, junto con <strong>OpenAI/Claude</strong> para la síntesis de respuestas. Cuenta con una base de datos vectorial <strong>Qdrant</strong> alojada en una arquitectura de cómputo efímero (EC2) desacoplada del almacenamiento persistente (EBS + SSM), optimizada fuertemente para minimizar costos operativos de la nube manteniendo la persistencia e indexación de los vectores intacta.</p>",
                 "tags": ["Python", "Terraform", "AWS", "Serverless", "Qdrant", "OpenAI", "Jina AI", "RAG"],
                 "github": "https://github.com/thesportydar/fintwit-rag",
@@ -57,7 +57,7 @@ export const projectsTranslations = {
         "title": "Projects",
         "projects": [
             {
-                "name": "FinTwit RAG: End-to-End Serverless AI Search",
+                "name": "End-to-End Serverless AI Search",
                 "description": "<p>An end-to-end <strong>Retrieval-Augmented Generation (RAG)</strong> pipeline and search engine for the Argentine FinTwit community. Fully automated using <strong>Terraform (IaC)</strong> and deployed as a <strong>Serverless API on AWS (Lambda + API Gateway)</strong>. It leverages <strong>Jina AI</strong> for high-quality embeddings and reranking, alongside <strong>OpenAI/Claude</strong> for generating synthesized answers. Features a <strong>Qdrant</strong> vector database running on a cost-optimized, ephemeral compute layer (EC2) that is decoupled from persistent storage (EBS + SSM), ensuring data persistence while minimizing cloud operational costs.</p>",
                 "tags": ["Python", "Terraform", "AWS", "Serverless", "Qdrant", "OpenAI", "Jina AI", "RAG"],
                 "github": "https://github.com/thesportydar/fintwit-rag",
